@@ -1,0 +1,83 @@
+.awards-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background-color: #f9f7f4;
+  font-family: "Cormorant Garamond", serif;
+  color: #333;
+}
+
+.awards-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6e4b3a;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+.award-entry {
+  background-color: #fff;
+  padding: 2rem;
+  border-left: 5px solid #cbb89d;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.8s ease forwards;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.award-entry:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01) translateY(-2px);
+}
+
+.award-year {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #9b8579;
+  margin-bottom: 0.25rem;
+}
+
+.award-entry h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #4a3d35;
+}
+
+.award-entry p {
+  font-size: 1.15rem;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.placement {
+  font-style: italic;
+  color: #8b5e3c;
+  font-weight: 500;
+}
+
+.award-entry {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.award-entry:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.award-entry:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.award-entry:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

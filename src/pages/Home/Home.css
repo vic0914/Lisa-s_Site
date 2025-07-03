@@ -1,0 +1,86 @@
+/* Start of Hero Section */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: auto;
+  max-width: 800px;
+  /* height: 500px; */
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0.65);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.hero-content h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #f9e9d4;
+}
+
+.hero-content p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #e5d7c0;
+}
+
+.hero-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* End of Hero Section */
+
+/* Start of Artistic Statement */
+
+.artist-statement {
+  background-color: #fdfaf3;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.artist-statement p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  color: #4a3b32;
+  line-height: 1.8;
+}
+
+/* End of Artistic Statement */

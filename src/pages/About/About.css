@@ -1,0 +1,44 @@
+.about-wrapper {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  color: #2c2c2c;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #6e4b3a;
+  margin-bottom: 3rem;
+}
+
+.about-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 0;
+  vertical-align: top;
+}
+
+.about-text {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-text p:first-of-type {
+  margin-top: 0;
+}

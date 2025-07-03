@@ -1,0 +1,228 @@
+/* NEW container around all carousel content */
+.carousel-container {
+  max-height: calc(100vh - 120px); /* leave room for header */
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Controls image area */
+.carousel-image-wrapper {
+  flex: 1;
+  max-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Controls image scaling */
+.carousel-image {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Space for the text and buttons remains visible */
+.carousel-text {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 16px;
+}
+
+.carousel-title {
+  font-family: "Cinzel", sans;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.carousel-medium {
+  font-style: italic;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.carousel-description {
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-button .icon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.carousel-button:hover {
+  background-color: #d4d4d4;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.carousel-description {
+  font-size: 1.125rem;
+  text-align: center;
+  color: #555;
+  font-style: italic;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  max-width: 710px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.carousel-description::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 auto 1rem auto;
+  border-radius: 1px;
+}
+
+/* .artistic-statement {
+  font-size: 1rem;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  max-width: 700px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.artistic-statement::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #bbb;
+  margin: 2rem auto 1rem auto;
+  border-radius: 1px;
+}
+
+.artistic-statement .signature {
+  margin-top: 1rem;
+  font-family: "Parisienne", cursive;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: right;
+  padding-right: 1rem;
+  opacity: 0.8;
+} */
+
+.contact-cta {
+  /* text-align: center;
+  margin: 2rem 0 4rem 0; */
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.contact-button {
+  background-color: #111;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-description {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.carousel-image,
+.carousel-text,
+.carousel-description {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
