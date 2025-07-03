@@ -1,5 +1,4 @@
 import "./About.css";
-import portrait from "/images/Image1.png";
 
 const About = () => {
   return (
@@ -7,7 +6,7 @@ const About = () => {
       <h1 className="about-title">About the Artist</h1>
       <div className="about-content">
         <img
-          src={portrait}
+          src={`${import.meta.env.BASE_URL}images/Image1.png`}
           alt="Painting of Lisa's work"
           className="about-image"
         />

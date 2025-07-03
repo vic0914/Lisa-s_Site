@@ -7,7 +7,9 @@ import { MdNavigateBefore } from "react-icons/md";
 const Work = () => {
   const paintings = [
     {
-      src: "/images/Judith-and-the-Head-of-Holofernes.png",
+      src: `${
+        import.meta.env.BASE_URL
+      }images/Judith-and-the-Head-of-Holofernes.png`,
       title: "Judith and the Head of Holofernes",
       medium: "Oil and Gold Leaf on Canvas",
       description:
@@ -23,7 +25,7 @@ const Work = () => {
       and the intimacy of oil paint to heighten the drama between beauty and brutality.",
     },
     {
-      src: "/images/Future-Aspirations.png",
+      src: `${import.meta.env.BASE_URL}images/Future-Aspirations.png`,
       title: "Future Aspirations",
       medium: "Oil and Gold Leaf on Canvas",
       description:
@@ -39,7 +41,7 @@ const Work = () => {
       honor the past while shaping the future.",
     },
     {
-      src: "/images/Untitled.png",
+      src: `${import.meta.env.BASE_URL}images/Untitled.png`,
       title: "Untitled",
       medium: "Oil and Gold Leaf on Canvas",
       description:

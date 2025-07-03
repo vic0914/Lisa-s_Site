@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <section className="hero-section">
         <img
-          src="/images/Image3.jpg"
+          src={`${import.meta.env.BASE_URL}images/Image3.jpg`}
           alt="Lisa artwork"
           className="hero-image"
         />

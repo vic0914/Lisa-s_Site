@@ -16,7 +16,7 @@ const Awards = () => {
         <h2>
           MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show
         </h2>
-        <p>"Untitled" - Lisa Tomlin</p>
+        <p>"Queen of the Nile" - Lisa Tomlin</p>
         <p className="placement">Second Place</p>
       </div>
 
@@ -25,7 +25,7 @@ const Awards = () => {
         <h2>
           MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show
         </h2>
-        <p>"Untitled" - Lisa Tomlin</p>
+        <p>"Youth" - Lisa Tomlin</p>
         <p className="placement">Second Place</p>
       </div>
     </div>

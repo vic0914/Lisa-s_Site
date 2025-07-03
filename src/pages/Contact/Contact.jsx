@@ -6,7 +6,10 @@ const Contact = () => {
       <div className="contact-left">
         <h1>Contact Lisa</h1>
         <div className="contact-images">
-          <img src="/images/Image2.jpg" alt="Contact Artwork 1" />
+          <img
+            src={`${import.meta.env.BASE_URL}images/Image2.jpg`}
+            alt="Contact Artwork 1"
+          />
         </div>
       </div>
       <form className="contact-form">
