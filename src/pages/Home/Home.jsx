@@ -6,14 +6,13 @@ const Home = () => {
     <>
       <section className="hero-section">
         <img
-          src={`${import.meta.env.BASE_URL}images/Image3.jpg`}
+          src={`${import.meta.env.BASE_URL}images/home-page-image.jpg`}
           alt="Lisa artwork"
           className="hero-image"
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <h1>Lisa’s Divine Canvas</h1>
-          <p>Symbolism, Power, and the Sacred Feminine</p>
+          <h1>Symbolism, Power, and the Sacred Feminine</h1>
           <Link to="/work" className="hero-button">
             Explore Gallery
           </Link>
@@ -26,7 +25,7 @@ const Home = () => {
           sacredness and violence, femininity and power. I draw inspiration from
           the opulence of Byzantine iconography and the ornamental decadence of
           Gustav Klimt, reinterpreting classical narratives through a
-          contemporary, often speculative lens. beneath.
+          contemporary, often speculative lens.&nbsp;beneath.
         </p>
         <p>
           Together, these paintings reflect my fascination with how women are
