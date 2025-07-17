@@ -20,20 +20,37 @@ const Home = () => {
       </section>
 
       <section className="artist-statement">
-        <p>
-          My work explores the tension between antiquity and futurism,
-          sacredness and violence, femininity and power. I draw inspiration from
-          the opulence of Byzantine iconography and the ornamental decadence of
-          Gustav Klimt, reinterpreting classical narratives through a
-          contemporary, often speculative lens.&nbsp;beneath.
-        </p>
-        <p>
-          Together, these paintings reflect my fascination with how women are
-          mythologized—as destroyers, protectors, or vessels of meaning—and how
-          visual storytelling can reclaim that gaze. Gold, for me, is not just a
-          material of luxury or reverence, but a veil, both illuminating and
-          obscuring what lies
-        </p>
+        <blockquote>
+          “Art is a line around your thoughts.”
+          <br />
+          <span className="attribution">- Gustav Klimt</span>
+        </blockquote>
+      </section>
+
+      <section className="in-progress-section">
+        <hr className="section-divider" />
+        <h2>In Progress</h2>
+        <div className="in-progress-content">
+          <div className="in-progress-image-wrapper">
+            <img
+              src={`${import.meta.env.BASE_URL}images/In_Progress.jpg`}
+              alt="Drawing in progress by Lisa Tomlin"
+              className="in-progress-image"
+            />
+          </div>
+          <div className="in-progress-text">
+            <p>
+              This drawing-in-progress captures a delicate balance between
+              classical reverence and contemporary craftsmanship. I tend to
+              focus on building lifelike depth through softly blended shading
+              and meticulous attention to facial features. The unfinished
+              elements—like the partially rendered hair and incomplete gilded
+              ornamentation—reveal the layering process behind the piece,
+              offering a glimpse into the transformation from raw sketch to
+              refined icon.
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );

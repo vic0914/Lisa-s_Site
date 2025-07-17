@@ -5,11 +5,13 @@ const About = () => {
     <div className="about-wrapper">
       <h1 className="about-title">About the Artist</h1>
       <div className="about-content">
-        <img
-          src={`${import.meta.env.BASE_URL}images/Image1.png`}
-          alt="Painting of Lisa's work"
-          className="about-image"
-        />
+        <div className="about-left-column">
+          <img
+            src={`${import.meta.env.BASE_URL}images/Image1.png`}
+            alt="Painting of Lisa's work"
+            className="about-image"
+          />
+        </div>
         <div className="about-text">
           <p>
             Art has always been my compass, guiding me through the complexities

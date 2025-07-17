@@ -16,7 +16,7 @@
 .contact-content {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* This ensures the image matches form height */
+  align-items: stretch;
   gap: 40px;
 }
 
@@ -58,7 +58,7 @@
 .form-group textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 1rem;
 }
 
@@ -78,9 +78,8 @@
   background-color: #111;
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 0;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-left: 50px;
 }
