@@ -58,8 +58,7 @@ const About = () => {
             contemporary, often speculative lens. Together, these paintings
             reflect my fascination with how women are mythologized—as
             destroyers, protectors, or vessels of meaning—and how visual
-            storytelling can reclaim that gaze. Gold, for me, is a material that
-            both reveals and conceals, adding layers of meaning.
+            storytelling can reclaim that gaze.
           </p>
         </div>
       </div>
