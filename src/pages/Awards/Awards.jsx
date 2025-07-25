@@ -22,7 +22,7 @@ const Awards = () => {
         <p className="placement">Gold Award</p>
         <button
           className="certificate-button"
-          onClick={() => handleOpen("/certificates/Award2025.docx")}
+          onClick={() => handleOpen("/certificates/Award2025.png")}
         >
           View Certificate
         </button>
