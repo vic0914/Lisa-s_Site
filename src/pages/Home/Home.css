@@ -6,6 +6,7 @@
   margin: 4rem auto;
   overflow: hidden;
   border-bottom: 10px solid black;
+  border-top: 10px solid black;
   /* max-width: 1600px; */
 }
 
@@ -33,8 +34,7 @@
 }
 
 .hero-content h1 {
-  font-weight: 400;
-
+  font-weight: 500;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
