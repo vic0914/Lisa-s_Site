@@ -1,7 +1,7 @@
 .site-footer {
   background-color: #111;
   color: #e5d7c0;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
 }
@@ -22,7 +22,7 @@
 }
 
 .footer-links a:hover {
-  color: #c6aa6a; /* gold accent */
+  color: #c6aa6a;
 }
 
 .footer-copy {

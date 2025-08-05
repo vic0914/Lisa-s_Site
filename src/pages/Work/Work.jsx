@@ -1,4 +1,4 @@
-import "./Work.css";
+// import "./Work.css";
 import Carousel from "../../components/Carousel/Carousel";
 
 const Work = () => {
@@ -37,17 +37,13 @@ const Work = () => {
       forward-facing, but rooted in who we have been. It is a vision of what we might become when we\
       honor the past while shaping the future.",
     },
-    {
-      src: `${import.meta.env.BASE_URL}images/Untitled-Image-2.jpg`,
-      title: "Untitled",
-      medium: "-------",
-      description: "-------",
-    },
+
     {
       src: `${import.meta.env.BASE_URL}images/Untitled-Image.jpg`,
-      title: "Untitled",
-      medium: "-------",
-      description: "-------",
+      title: "Shield Maiden",
+      medium: "Colored Pencil/Charcoal",
+      description:
+        "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense, gilded, mosaic-like patterns that surround her, evoking both protection and reverence. The shield is not simply a weapon, but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a form of defiance, and stillness, a quiet assertion of power.",
     },
   ];
 
