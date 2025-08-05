@@ -17,28 +17,42 @@ const Awards = () => {
       <h1>Awards & Recognition</h1>
       <div className="award-entry">
         <span className="award-year">2025</span>
-        <h2>Artist Invitational 11 Art Awards - Camelback Gallery</h2>
+        <div className="award-header">
+          <h2>Artist Invitational 11 Art Awards - Camelback Gallery</h2>
+
+          <button
+            className="certificate-button"
+            onClick={() =>
+              handleOpen(
+                `${import.meta.env.BASE_URL}certificates/Award2025.png`
+              )
+            }
+          >
+            View Certificate
+          </button>
+        </div>
         <p>"Future Aspirations" - Lisa Tomlin</p>
         <p className="placement">Gold Award</p>
-        <button
-          className="certificate-button"
-          onClick={() => handleOpen("/certificates/Award2025.png")}
-        >
-          View Certificate
-        </button>
       </div>
 
       <div className="award-entry">
         <span className="award-year">2024</span>
-        <h2>Artist Invitational 10 Art Awards - Camelback Gallery</h2>
+        <div className="award-header">
+          <h2>Artist Invitational 10 Art Awards - Camelback Gallery</h2>
+
+          <button
+            className="certificate-button"
+            onClick={() =>
+              handleOpen(
+                `${import.meta.env.BASE_URL}certificates/Award2024.jpg`
+              )
+            }
+          >
+            View Certificate
+          </button>
+        </div>
         <p>"Judith and the Head of Holofernes" - Lisa Tomlin</p>
         <p className="placement">Silver Award</p>
-        <button
-          className="certificate-button"
-          onClick={() => handleOpen("/certificates/Award2024.docx")}
-        >
-          View Certificate
-        </button>
       </div>
 
       <div className="award-entry">

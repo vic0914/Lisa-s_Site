@@ -22,19 +22,49 @@ const Header = () => {
       </div>
 
       <nav className={`nav-bar ${menuOpen ? "open" : ""}`}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/"
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Home
         </Link>
-        <Link to="/work" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/work"
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Work
         </Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/about"
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           About
         </Link>
-        <Link to="/awards" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/awards"
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Awards
         </Link>
-        <Link to="contact" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="contact"
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Contact
         </Link>
       </nav>

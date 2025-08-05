@@ -82,7 +82,7 @@
   font-size: 1.5rem;
   color: #a38c84; /* lighter tone */
   font-style: italic;
-  line-height: 1.6;
+  line-height: 0.9;
 }
 
 .artist-statement .attribution {
@@ -101,7 +101,7 @@
   padding: 4rem 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .section-divider {
@@ -115,10 +115,10 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #6e4b3a;
+  color: hsl(20, 31%, 33%);
 }
 
-.in-progress-content {
+/* .in-progress-content {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -126,26 +126,4 @@
   gap: 2.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-}
-
-.in-progress-image-wrapper {
-  flex: 1;
-  max-width: 500px;
-}
-
-.in-progress-image {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.in-progress-text {
-  flex: 1;
-  max-width: 600px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.15rem;
-  color: #4a3b32;
-  line-height: 1.75;
-  display: flex;
-  align-items: center;
-}
+} */

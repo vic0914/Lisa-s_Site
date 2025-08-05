@@ -58,8 +58,8 @@
 }
 
 .certificate-button {
-  margin-top: 1rem;
-  float: right;
+  align-self: flex-start;
+  margin-top: 1.2rem;
   padding: 0.5rem 1rem;
   font-size: 0.95rem;
   background-color: #6e4b3a;
@@ -67,6 +67,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transform: translateY(-8px);
 }
 
 .certificate-button:hover {
@@ -106,4 +107,10 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.award-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

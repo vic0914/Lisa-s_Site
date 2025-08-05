@@ -7,7 +7,7 @@ const About = () => {
       <div className="about-content">
         <div className="about-left-column">
           <img
-            src={`${import.meta.env.BASE_URL}images/Image1.png`}
+            src={`${import.meta.env.BASE_URL}images/About-Image.png`}
             alt="Painting of Lisa's work"
             className="about-image"
           />
