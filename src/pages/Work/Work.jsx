@@ -43,7 +43,7 @@ const Work = () => {
       title: "Shield Maiden",
       medium: "Colored Pencil/Charcoal",
       description:
-        "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense, gilded, mosaic-like patterns that surround her, evoking both protection and reverence. The shield is not simply a weapon, but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a form of defiance, and stillness, a quiet assertion of power.",
+        "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense, gilded, mosaic-like patterns that surround her, evoking both protection and reverence. The shield is not simply a weapon, but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a form of defiance and stillness, a quiet assertion of power.",
     },
   ];
 
