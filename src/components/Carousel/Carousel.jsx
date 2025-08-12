@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { useLocation } from "react-router-dom";
+import HoverZoom from "./../HoverZoom/HoverZoom";
 import "./Carousel.css";
 
 /**
@@ -52,16 +53,26 @@ const Carousel = ({ items = [] }) => {
         <div className="carousel-image-wrapper">
           {current.type === "pair" ? (
             <div className={`carousel-pair ${fading ? "fade-out" : "fade-in"}`}>
-              <img
-                src={current.left.src}
-                alt={current.left.alt || current.title || ""}
-                className="carousel-media pair-item"
-              />
-              <img
-                src={current.right.src}
-                alt={current.right.alt || current.title || ""}
-                className="carousel-media pair-item"
-              />
+              <div
+                className={`carousel-pair ${fading ? "fade-out" : "fade-in"}`}
+              >
+                <HoverZoom
+                  src={current.left.src}
+                  alt={current.left.alt || current.title || ""}
+                  wrapperClassName="pair-item"
+                  imgClassName="carousel-media"
+                  zoom={1.25}
+                  size={150}
+                />
+                <HoverZoom
+                  src={current.right.src}
+                  alt={current.right.alt || current.title || ""}
+                  wrapperClassName="pair-item"
+                  imgClassName="carousel-media"
+                  zoom={1.25}
+                  size={150}
+                />
+              </div>
             </div>
           ) : isVideo ? (
             <video
@@ -73,10 +84,12 @@ const Carousel = ({ items = [] }) => {
               preload="metadata"
             />
           ) : (
-            <img
+            <HoverZoom
               src={current.src}
               alt={current.title || ""}
-              className={`carousel-media ${fading ? "fade-out" : "fade-in"}`}
+              imgClassName={`carousel-media ${fading ? "fade-out" : "fade-in"}`}
+              zoom={1.25}
+              size={150}
             />
           )}
         </div>

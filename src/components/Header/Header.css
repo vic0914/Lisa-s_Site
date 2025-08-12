@@ -34,7 +34,6 @@
   transition: color 0.3s ease;
 }
 
-/* Hamburger button styles (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -52,36 +51,32 @@
   transition: 0.3s;
 }
 
-/* --- Smooth mobile nav reveal + hamburger morph --- */
 @media (max-width: 768px) {
-  /* Start hidden but measurable so we can animate */
   .nav-bar {
-    display: block; /* no flex here so height can animate */
+    display: block;
     overflow: hidden;
-    max-height: 0; /* collapsed */
+    max-height: 0;
     opacity: 0;
     transform: translateY(-8px);
     transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
-    padding: 0; /* remove top/bottom padding while closed */
+    padding: 0;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
   }
 
   .nav-bar.open {
-    max-height: 340px; /* big enough for all links */
+    max-height: 340px;
     opacity: 1;
     transform: translateY(0);
-    padding: 0.75rem 0; /* paddings fade in with the open state */
+    padding: 0.75rem 0;
   }
 
-  /* Vertically stack links when opened */
   .nav-bar a {
     display: block;
     padding: 0.6rem 0;
     text-align: center;
   }
 
-  /* Hamburger -> X animation */
   .hamburger {
     display: flex;
     margin: 0.25rem auto 0.5rem;
@@ -104,7 +99,6 @@
   }
 }
 
-/* Keep desktop exactly the same (explicitly override the mobile block) */
 @media (min-width: 769px) {
   .nav-bar {
     display: flex;

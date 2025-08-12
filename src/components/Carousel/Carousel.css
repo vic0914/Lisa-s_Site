@@ -37,11 +37,12 @@
 }
 
 .carousel-pair .pair-item {
-  flex: 1 1 0; /* each takes half the width */
+  flex: 1 1 0; /* split row evenly */
   max-width: 50%;
-  max-height: 100%;
-  object-fit: contain; /* matches your single-image look */
-  display: block;
+  height: 100%; /* fill the media box height */
+  display: flex; /* center its child image */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Shared class for both <img> and <video> so they look identical */
@@ -77,27 +78,6 @@
 }
 
 /* Navigation buttons */
-/* .carousel-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.carousel-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: none;
-  background: #111;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  transition: transform 0.15s ease, opacity 0.15s ease;
-} */
 
 .carousel-buttons {
   display: flex;
@@ -125,11 +105,6 @@
   color: white;
   display: block;
 }
-
-/* .carousel-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-} */
 
 /* Slide description (full width beneath container) */
 .carousel-description {
@@ -234,10 +209,9 @@
     max-height: 70vh;
     padding: 8px;
     border-radius: 6px;
-  } /* Make the wrapper the fixed-height box you already use */
+  }
   .carousel-image-wrapper {
-    /* keep your existing width/height values */
-    height: 64vw; /* or your current value */
+    height: 64vw;
     position: relative;
     overflow: hidden;
   }
@@ -246,7 +220,7 @@
   .carousel-buttons {
     display: flex;
     justify-content: center;
-    align-items: center; /* align both buttons perfectly */
+    align-items: center;
     gap: 10px;
   }
 
@@ -264,7 +238,7 @@
   }
 
   .carousel-image-wrapper {
-    height: 64vw; /* or your current value */
+    height: 64vw;
     position: relative;
     overflow: hidden;
   }
@@ -297,8 +271,8 @@
   .carousel-button {
     width: 52px;
     height: 52px;
-    padding: 0; /* rely on fixed size above */
-    line-height: 1; /* consistent box metrics */
+    padding: 0;
+    line-height: 1;
   }
 
   /* keep just a subtle state change without moving the button */
@@ -317,7 +291,7 @@
   .carousel-buttons {
     display: flex;
     justify-content: center;
-    align-items: center; /* align both buttons perfectly */
+    align-items: center;
     gap: 10px;
   }
 
@@ -339,4 +313,35 @@
   .carousel-image-wrapper {
     height: 68vw;
   }
+}
+
+/* Enable hover zoom only on devices that support hover (won't run on touch) */
+@media (hover: hover) and (pointer: fine) {
+  .hover-zoom-pop {
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+    border-radius: 999px; /* change to 8px for square lens */
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.hover-zoom-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The actual image inside HoverZoom */
+.hover-zoom-wrapper .carousel-media {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }

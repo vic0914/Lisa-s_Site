@@ -13,7 +13,6 @@
   font-size: 4rem;
   color: #6e4b3a;
   margin-bottom: 3rem;
-  /* letter-spacing: 1px; */
 }
 
 .award-entry {
@@ -22,8 +21,6 @@
   border-left: 5px solid #cbb89d;
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  /* animation: fadeIn 0.8s ease forwards;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; */
 }
 
 .award-entry:hover {
@@ -74,7 +71,6 @@
   background-color: #5a3c2f;
 }
 
-/* Fullscreen modal */
 .certificate-modal {
   position: fixed;
   inset: 0;
@@ -143,7 +139,6 @@
     margin-bottom: 0.25rem;
   }
 
-  /* Title + button: stack vertically on phones */
   .award-header {
     flex-direction: column;
     align-items: flex-start;
@@ -161,14 +156,12 @@
     line-height: 1.5;
   }
 
-  /* Make the certificate button easy to tap and align with text */
   .certificate-button {
     margin-top: 1rem;
     align-self: flex-start;
     width: auto;
   }
 
-  /* Modal: fit a bit tighter on small screens */
   .certificate-modal-content {
     max-width: 96%;
     max-height: 82%;
@@ -180,7 +173,6 @@
   }
 }
 
-/* Ultra-narrow phones */
 @media (max-width: 380px) {
   .awards-page h1 {
     font-size: 2rem;
@@ -191,19 +183,17 @@
 }
 
 @media (max-width: 768px) {
-  /* Make the card the positioning context */
   .award-entry {
     position: relative;
-    padding-bottom: 4.25rem; /* room for the button so it doesn't overlap text */
+    padding-bottom: 4.25rem;
   }
 
-  /* Pin the button to the bottom-left of the card */
   .certificate-button {
     position: absolute;
-    left: 2rem; /* align with your card padding */
-    bottom: 1.5rem; /* distance from bottom edge */
-    margin-top: 0; /* override any margins */
-    transform: none; /* kill the upward shift */
-    width: auto; /* keep it natural width */
+    left: 2rem;
+    bottom: 1.5rem;
+    margin-top: 0;
+    transform: none;
+    width: auto;
   }
 }

@@ -22,7 +22,6 @@
 
 .about-content {
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 2rem;
   align-items: stretch;
 }
@@ -82,14 +81,13 @@
     margin-bottom: 1rem;
   }
 
-  /* Keep row layout but adjust widths */
   .about-content {
     flex-direction: row;
     gap: 1rem;
   }
 
   .about-left-column {
-    flex: 0 0 40%; /* image/black column takes 40% */
+    flex: 0 0 40%;
   }
 
   .about-image {
@@ -98,7 +96,7 @@
   }
 
   .about-text {
-    flex: 1; /* text takes remaining width */
+    flex: 1;
     font-size: 0.95rem;
     line-height: 1.6;
   }

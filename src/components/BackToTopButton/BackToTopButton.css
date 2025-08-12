@@ -1,7 +1,7 @@
 .back-to-top {
   /* sizing knobs */
-  --btn-size: 56px; /* default button box */
-  --icon-scale: 0.7; /* icon = 70% of button */
+  --btn-size: 56px;
+  --icon-scale: 0.7;
 
   position: fixed;
   right: 16px;
@@ -13,7 +13,7 @@
   border: none;
   border-radius: 50%;
   background: transparent;
-  color: #222; /* icon color (inherits) */
+  color: #222;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -25,7 +25,6 @@
 }
 
 .back-to-top-icon {
-  /* react-icons size follows font-size */
   font-size: calc(var(--btn-size) * var(--icon-scale));
   line-height: 1;
   display: block;
@@ -45,17 +44,17 @@
   .back-to-top {
     right: 12px;
     bottom: 12px;
-    --btn-size: 48px; /* smaller on tiny phones */
+    --btn-size: 48px;
   }
 }
 
 .back-to-top {
   color: #222;
-} /* normal over light content */
+}
 .back-to-top.on-dark {
   color: #fff;
-} /* when overlapping footer */
+}
 
 .back-to-top {
   z-index: 1000;
-} /* ensure it sits above the footer */
+}
