@@ -84,3 +84,56 @@
   cursor: pointer;
   margin-left: 100px;
 }
+
+/* --- Mobile layout --- */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* image above, form below */
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .contact-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  /* First/Last name in one column instead of two */
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Make inputs stretch the full form width */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  /* Align the button with the inputs (full width on mobile) */
+  .submit-wrapper {
+    text-align: left; /* aligns button with left edge of fields */
+    margin-top: 1rem;
+  }
+
+  .submit-button {
+    width: 100%; /* same width as fields */
+    margin-left: 0; /* override the desktop offset */
+  }
+
+  /* Slightly smaller title on small screens */
+  .contact-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-wrapper {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+}

@@ -69,3 +69,41 @@
 .about-text p:last-of-type {
   margin-bottom: 0;
 }
+
+/* --- Mobile: keep side-by-side layout --- */
+@media (max-width: 768px) {
+  .about-wrapper {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Keep row layout but adjust widths */
+  .about-content {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-left-column {
+    flex: 0 0 40%; /* image/black column takes 40% */
+  }
+
+  .about-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-text {
+    flex: 1; /* text takes remaining width */
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+}

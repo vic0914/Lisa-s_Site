@@ -1,3 +1,4 @@
+/* Container keeps things centered and constrained */
 .carousel-container {
   max-height: calc(100vh - 120px);
   max-width: 800px;
@@ -10,20 +11,41 @@
   box-sizing: border-box;
 }
 
+/* Fixed media box for consistent layout */
 .carousel-image-wrapper {
   width: 700px;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3f3f3;
+  background: #f3f3f3;
   padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  /* position: relative; */
 }
 
-.carousel-image {
+/* Two images side-by-side within the same fixed media box */
+.carousel-pair {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* space between the two images */
+}
+
+.carousel-pair .pair-item {
+  flex: 1 1 0; /* each takes half the width */
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain; /* matches your single-image look */
+  display: block;
+}
+
+/* Shared class for both <img> and <video> so they look identical */
+.carousel-media {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -31,6 +53,7 @@
   display: block;
 }
 
+/* Text underneath media */
 .carousel-text {
   text-align: center;
   margin-top: 1rem;
@@ -38,22 +61,43 @@
 }
 
 .carousel-title {
-  font-family: "Cinzel", sans;
+  font-family: "Cinzel", serif;
   font-size: 1.75rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.carousel-medium {
-  font-style: italic;
-  color: #666;
+  font-weight: 700;
   margin: 0.25rem 0;
 }
 
-.carousel-description {
-  color: #444;
-  margin-top: 0.5rem;
+.carousel-medium {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+
+  font-size: 1rem;
+  color: #555;
+  margin: 0.25rem 0;
 }
+
+/* Navigation buttons */
+/* .carousel-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+} */
 
 .carousel-buttons {
   display: flex;
@@ -65,44 +109,29 @@
 .carousel-button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #e5e5e5;
+  background-color: black;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-button .icon {
-  font-size: 24px;
-  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  color: white;
+  display: block;
 }
 
-.carousel-button:hover {
-  background-color: #d4d4d4;
-}
+/* .carousel-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+} */
 
-@keyframes slideIn {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/* Slide description (full width beneath container) */
 .carousel-description {
   font-size: 1.125rem;
   text-align: center;
@@ -127,29 +156,18 @@
   border-radius: 1px;
 }
 
-@media (max-width: 768px) {
-  .carousel-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .carousel-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .carousel-description {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-  }
+/* Empty state */
+.carousel-empty {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-family: "Lato", sans-serif;
 }
 
-.carousel-image,
-.carousel-text,
-.carousel-description {
+/* Fade animations reused for media/text/description */
+.fade-in,
+.fade-out {
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .fade-in {
@@ -160,4 +178,165 @@
 .fade-out {
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* ---------- Mobile polish: keep same stacked layout ---------- */
+@media (max-width: 600px) {
+  .carousel-container {
+    /* max-width: 100%; */
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  .carousel-text {
+    margin-top: 0.75rem;
+    padding: 0 8px;
+  }
+
+  .carousel-title {
+    font-size: 1.4rem;
+    margin: 0.1rem 0 0.25rem;
+  }
+
+  .carousel-medium {
+    font-size: 0.95rem;
+  }
+
+  .carousel-buttons {
+    margin-top: 0.75rem;
+    gap: 10px;
+  }
+
+  /* Bigger, thumb-friendly controls */
+  .carousel-button {
+    width: 52px;
+    height: 52px;
+  }
+
+  .carousel-button .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Keep; this defines the mobile media box height */
+  .carousel-image-wrapper {
+    width: 100%;
+    height: 64vw;
+    max-height: 70vh;
+    padding: 8px;
+    border-radius: 6px;
+  } /* Make the wrapper the fixed-height box you already use */
+  .carousel-image-wrapper {
+    /* keep your existing width/height values */
+    height: 64vw; /* or your current value */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Buttons container: lock vertical alignment */
+  .carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* align both buttons perfectly */
+    gap: 10px;
+  }
+
+  /* Buttons: fixed box, no lift on hover */
+  .carousel-button {
+    width: 52px;
+    height: 52px;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .carousel-button:hover,
+  .carousel-button:focus {
+    opacity: 0.9;
+  }
+
+  .carousel-image-wrapper {
+    height: 64vw; /* or your current value */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Buttons container: lock vertical alignment */
+  .carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Buttons: fixed box, no lift on hover */
+  .carousel-button {
+    width: 52px;
+    height: 52px;
+    line-height: 1;
+    padding: 0;
+  }
+
+  /* Buttons: same vertical alignment, no jump on hover/focus */
+  .carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ensure perfect vertical alignment */
+    gap: 10px;
+    margin-top: 0.75rem;
+  }
+
+  .carousel-button {
+    width: 52px;
+    height: 52px;
+    padding: 0; /* rely on fixed size above */
+    line-height: 1; /* consistent box metrics */
+  }
+
+  /* keep just a subtle state change without moving the button */
+  .carousel-button:hover,
+  .carousel-button:focus {
+    opacity: 0.9;
+  }
+
+  /* Make the wrapper the fixed-height box you already use */
+  .carousel-image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Buttons container: lock vertical alignment */
+  .carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* align both buttons perfectly */
+    gap: 10px;
+  }
+
+  /* Buttons: fixed box, no lift on hover */
+  .carousel-button {
+    width: 52px;
+    height: 52px;
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+/* Ultra-narrow phones */
+@media (max-width: 380px) {
+  .carousel-title {
+    font-size: 1.25rem;
+  }
+
+  .carousel-image-wrapper {
+    height: 68vw;
+  }
 }

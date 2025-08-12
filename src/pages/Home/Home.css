@@ -127,3 +127,96 @@
   margin-top: 2rem;
   flex-wrap: wrap;
 } */
+
+/* ===== Mobile tweaks for Hero + Artistic Statement ===== */
+@media (max-width: 768px) {
+  /* Prevent 100vw from causing horizontal scroll on phones */
+  .hero-section {
+    width: 100%;
+    margin: 0 auto 2rem;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+  }
+
+  .hero-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.35rem; /* readable but not overpowering */
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  /* Artistic Statement */
+  .artist-statement {
+    padding: 2.25rem 1rem;
+    max-width: 680px; /* keep a nice measure on tablets too */
+  }
+
+  .artist-statement blockquote {
+    font-size: 1.25rem;
+    line-height: 1.3; /* your desktop uses 0.9 – too tight on mobile */
+  }
+
+  .artist-statement .attribution {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Ultra-small phones */
+@media (max-width: 420px) {
+  .hero-section {
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    width: 100%; /* thumb-friendly */
+    max-width: 320px;
+  }
+
+  .artist-statement {
+    padding: 1.75rem 0.9rem;
+  }
+
+  .artist-statement blockquote {
+    font-size: 1.15rem;
+  }
+}
+
+/* ===== Extra-small Hero adjustments ===== */
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 1rem; /* smaller headline */
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-button {
+    font-size: 0.8rem; /* smaller button text */
+    padding: 0.45rem 0.9rem; /* tighter padding */
+    border-width: 1px; /* thinner border */
+  }
+}
+
+/* Mobile: hide Hero heading, keep button centered */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    display: none;
+  }
+
+  .hero-button {
+    margin: 0; /* ensure it's vertically centered */
+  }
+}

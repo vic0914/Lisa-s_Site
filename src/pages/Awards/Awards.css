@@ -114,3 +114,96 @@
   justify-content: space-between;
   align-items: baseline;
 }
+
+/* ---------- Mobile layout for Award cards ---------- */
+@media (max-width: 768px) {
+  .awards-page {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .awards-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .award-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .award-content {
+    flex: 1;
+  }
+
+  .award-year {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Title + button: stack vertically on phones */
+  .award-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .award-entry h2 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin: 0.25rem 0;
+  }
+
+  .award-entry p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Make the certificate button easy to tap and align with text */
+  .certificate-button {
+    margin-top: 1rem;
+    align-self: flex-start;
+    width: auto;
+  }
+
+  /* Modal: fit a bit tighter on small screens */
+  .certificate-modal-content {
+    max-width: 96%;
+    max-height: 82%;
+  }
+
+  .close-btn {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+/* Ultra-narrow phones */
+@media (max-width: 380px) {
+  .awards-page h1 {
+    font-size: 2rem;
+  }
+  .award-entry h2 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Make the card the positioning context */
+  .award-entry {
+    position: relative;
+    padding-bottom: 4.25rem; /* room for the button so it doesn't overlap text */
+  }
+
+  /* Pin the button to the bottom-left of the card */
+  .certificate-button {
+    position: absolute;
+    left: 2rem; /* align with your card padding */
+    bottom: 1.5rem; /* distance from bottom edge */
+    margin-top: 0; /* override any margins */
+    transform: none; /* kill the upward shift */
+    width: auto; /* keep it natural width */
+  }
+}

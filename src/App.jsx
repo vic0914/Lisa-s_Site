@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 
 // Pages
 import Home from "./pages/Home/Home";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <BackToTopButton threshold={600} />
       <Footer />
     </div>
   );

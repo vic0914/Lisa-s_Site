@@ -5,16 +5,36 @@ import Carousel from "../../components/Carousel/Carousel";
 const Home = () => {
   const inProgress = [
     {
-      src: `${import.meta.env.BASE_URL}images/In-Progress-1.jpg`,
-      title: "In progress image 1",
-      medium: "-----",
+      type: "pair",
+      title: "Shield Maiden",
+      medium: "Colored Pencil/Charcoal",
+      description:
+        "This drawing-in-progress captures a delicate balance between classical reverence and contemporary craftsmanship.\
+         I love creating lifelike depth with softly blended shading and paying close attention to facial features. \
+         The unfinished parts, like the partly drawn hair and incomplete gilded ornamentation, show the layering process,\
+          giving you a peek into the transformation from a raw sketch to a polished icon. ",
+      left: {
+        src: `${import.meta.env.BASE_URL}images/In-Progress-1.jpg`,
+        alt: "Left image",
+      },
+      right: {
+        src: `${import.meta.env.BASE_URL}images/Untitled-Image.jpg`,
+        alt: "Right image",
+      },
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
+      title: "In Progress Image 2",
+      medium: "Oil and Gold Leaf on Canvas",
       description: "-----",
     },
     {
-      src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
-      title: "In progress image 2",
-      medium: "medium",
-      description: "desc",
+      type: "video",
+      src: `${import.meta.env.BASE_URL}videos/Process.MOV`,
+      title: "Process Video",
+      medium: "Short Clip",
+      description: "A behind the scenes look.",
     },
   ];
 
@@ -45,7 +65,7 @@ const Home = () => {
 
       <section className="in-progress-section">
         <hr className="section-divider" />
-        <h2>In Progress</h2>
+        <h2>Progress Side-by-Side</h2>
         <div>
           <Carousel items={inProgress} />
         </div>

@@ -1,0 +1,61 @@
+.back-to-top {
+  /* sizing knobs */
+  --btn-size: 56px; /* default button box */
+  --icon-scale: 0.7; /* icon = 70% of button */
+
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #222; /* icon color (inherits) */
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top-icon {
+  /* react-icons size follows font-size */
+  font-size: calc(var(--btn-size) * var(--icon-scale));
+  line-height: 1;
+  display: block;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    right: 12px;
+    bottom: 12px;
+    --btn-size: 48px; /* smaller on tiny phones */
+  }
+}
+
+.back-to-top {
+  color: #222;
+} /* normal over light content */
+.back-to-top.on-dark {
+  color: #fff;
+} /* when overlapping footer */
+
+.back-to-top {
+  z-index: 1000;
+} /* ensure it sits above the footer */
