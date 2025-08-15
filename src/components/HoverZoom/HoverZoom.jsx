@@ -1,4 +1,4 @@
-import { useRef, useState, useId } from "react";
+import { useRef, useState, useId, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 export default function HoverZoom({
@@ -13,7 +13,21 @@ export default function HoverZoom({
   const [show, setShow] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [zoomStyle, setZoomStyle] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
   const instanceId = useId();
+
+  // Detect if device supports hover (desktop) vs touch (mobile)
+  useEffect(() => {
+    const checkMobile = () => {
+      // Check if device supports hover and has a fine pointer (mouse)
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+      setIsMobile(!(hasHover && hasFinePointer));
+    };
+    
+    checkMobile();
+    // No need for resize listener since hover capability doesn't change
+  }, []);
 
   const handleMouseMove = (e) => {
     const img = imgRef.current;
@@ -84,21 +98,21 @@ export default function HoverZoom({
         src={src}
         alt={alt}
         className={imgClassName}
-        onMouseEnter={(e) => {
+        onMouseEnter={!isMobile ? (e) => {
           e.stopPropagation();
           setShow(true);
-        }}
-        onMouseLeave={(e) => {
+        } : undefined}
+        onMouseLeave={!isMobile ? (e) => {
           e.stopPropagation();
           setShow(false);
-        }}
-        onMouseMove={(e) => {
+        } : undefined}
+        onMouseMove={!isMobile ? (e) => {
           e.stopPropagation();
           handleMouseMove(e);
-        }}
+        } : undefined}
         draggable={false}
       />
-      {show &&
+      {!isMobile && show &&
         ReactDOM.createPortal(
           <div
             className="hover-zoom-popup"
