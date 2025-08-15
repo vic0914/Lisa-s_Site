@@ -28,8 +28,8 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="phone">Phone (Optional)</label>
-            <input type="tel" id="phone" name="phone" />
+            <label htmlFor="phone">Phone*</label>
+            <input type="tel" id="phone" name="phone" required />
           </div>
 
           <div className="form-group">
