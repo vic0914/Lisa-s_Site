@@ -1,61 +1,79 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useId } from "react";
+import ReactDOM from "react-dom";
 
 export default function HoverZoom({
   src,
   alt = "",
-  zoom = 1.25, // magnification
-  size = 200, // popup square size (px)
+  magnification = 2.0,
+  size = 200,
   wrapperClassName = "",
   imgClassName = "",
 }) {
   const imgRef = useRef(null);
-  const popRef = useRef(null);
-  const raf = useRef(null);
   const [show, setShow] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [zoomStyle, setZoomStyle] = useState({});
+  const instanceId = useId();
 
-  const update = (e) => {
+  const handleMouseMove = (e) => {
     const img = imgRef.current;
-    const pop = popRef.current;
-    if (!img || !pop) return;
+    if (!img) return;
 
     const rect = img.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const iw = rect.width;
-    const ih = rect.height;
 
-    const bgW = iw * zoom;
-    const bgH = ih * zoom;
+    // Only proceed if mouse is actually over this specific image
+    if (x < 0 || x > rect.width || y < 0 || y > rect.height) {
+      return;
+    }
 
-    const half = size / 2;
-    const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+    // Calculate background position to center the cursor position in the popup
+    const bgWidth = rect.width * magnification;
+    const bgHeight = rect.height * magnification;
 
-    let bgX = (x / iw) * bgW - half;
-    let bgY = (y / ih) * bgH - half;
+    // Map cursor position to background coordinates
+    const bgX = (x / rect.width) * bgWidth;
+    const bgY = (y / rect.height) * bgHeight;
 
-    bgX = clamp(bgX, 0, Math.max(0, bgW - size));
-    bgY = clamp(bgY, 0, Math.max(0, bgH - size));
+    // Center the cursor position in the popup with proper clamping
+    let offsetX = bgX - size / 2;
+    let offsetY = bgY - size / 2;
 
-    pop.style.backgroundImage = `url(${src})`;
-    pop.style.backgroundSize = `${bgW}px ${bgH}px`;
-    pop.style.backgroundPosition = `-${bgX}px -${bgY}px`;
+    // Clamp to prevent showing areas outside the image
+    offsetX = Math.max(0, Math.min(offsetX, bgWidth - size));
+    offsetY = Math.max(0, Math.min(offsetY, bgHeight - size));
 
-    const wrapRect = img.parentElement.getBoundingClientRect();
-    let left = e.clientX - wrapRect.left + 16;
-    let top = e.clientY - wrapRect.top - size - 16;
+    // Smart positioning: try right first, then left if no space
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const margin = 20;
 
-    left = Math.min(Math.max(0, left), wrapRect.width - size);
-    top = Math.min(Math.max(0, top), wrapRect.height - size);
+    let finalX = e.clientX + margin;
+    let finalY = e.clientY - size / 2;
 
-    pop.style.left = `${left}px`;
-    pop.style.top = `${top}px`;
-  };
+    // If popup would go off right edge, position it to the left of cursor
+    if (finalX + size > viewportWidth - margin) {
+      finalX = e.clientX - size - margin;
+    }
 
-  const onMove = (e) => {
-    if (raf.current) return;
-    raf.current = requestAnimationFrame(() => {
-      update(e);
-      raf.current = null;
+    // If still off left edge, clamp to left margin
+    if (finalX < margin) {
+      finalX = margin;
+    }
+
+    // Vertical positioning with viewport bounds
+    if (finalY < margin) {
+      finalY = margin;
+    } else if (finalY + size > viewportHeight - margin) {
+      finalY = viewportHeight - size - margin;
+    }
+
+    setPosition({ x: finalX, y: finalY });
+    setZoomStyle({
+      backgroundImage: `url(${src})`,
+      backgroundSize: `${bgWidth}px ${bgHeight}px`,
+      backgroundPosition: `-${offsetX}px -${offsetY}px`,
     });
   };
 
@@ -66,18 +84,42 @@ export default function HoverZoom({
         src={src}
         alt={alt}
         className={imgClassName}
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-        onMouseMove={onMove}
+        onMouseEnter={(e) => {
+          e.stopPropagation();
+          setShow(true);
+        }}
+        onMouseLeave={(e) => {
+          e.stopPropagation();
+          setShow(false);
+        }}
+        onMouseMove={(e) => {
+          e.stopPropagation();
+          handleMouseMove(e);
+        }}
         draggable={false}
       />
-      {show && (
-        <div
-          ref={popRef}
-          className="hover-zoom-pop"
-          style={{ width: size, height: size }}
-        />
-      )}
+      {show &&
+        ReactDOM.createPortal(
+          <div
+            className="hover-zoom-popup"
+            data-instance={instanceId}
+            style={{
+              position: "fixed",
+              left: position.x,
+              top: position.y,
+              width: size,
+              height: size,
+              border: "2px solid #fff",
+              borderRadius: "8px",
+              pointerEvents: "none",
+              zIndex: 9999,
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+              backgroundRepeat: "no-repeat",
+              ...zoomStyle,
+            }}
+          />,
+          document.body
+        )}
     </div>
   );
 }

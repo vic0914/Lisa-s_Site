@@ -61,16 +61,12 @@ const Carousel = ({ items = [] }) => {
                   alt={current.left.alt || current.title || ""}
                   wrapperClassName="pair-item"
                   imgClassName="carousel-media"
-                  zoom={1.25}
-                  size={150}
                 />
                 <HoverZoom
                   src={current.right.src}
                   alt={current.right.alt || current.title || ""}
                   wrapperClassName="pair-item"
                   imgClassName="carousel-media"
-                  zoom={1.25}
-                  size={150}
                 />
               </div>
             </div>
@@ -88,8 +84,6 @@ const Carousel = ({ items = [] }) => {
               src={current.src}
               alt={current.title || ""}
               imgClassName={`carousel-media ${fading ? "fade-out" : "fade-in"}`}
-              zoom={1.25}
-              size={150}
             />
           )}
         </div>

@@ -23,23 +23,23 @@ const Home = () => {
       },
     },
     {
-      type: "image",
-      src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
-      title: "In Progress Image 2",
-      medium: "Oil and Gold Leaf on Canvas",
-      description: "-----",
-    },
-    {
       type: "video",
       src: `${import.meta.env.BASE_URL}videos/Process.MOV`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
     },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
+      title: "In Progress Image 2",
+      medium: "Oil and Gold Leaf on Canvas",
+      description: "-----",
+    },
   ];
 
   return (
-    <>
+    <div className="home-page">
       <section className="hero-section">
         <img
           src={`${import.meta.env.BASE_URL}images/Hero-Image.jpg`}
@@ -66,11 +66,11 @@ const Home = () => {
       <section className="in-progress-section">
         <hr className="section-divider" />
         <h2>Progress Side-by-Side</h2>
-        <div>
+        <div className="home-carousel-slot">
           <Carousel items={inProgress} />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
