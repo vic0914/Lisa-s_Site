@@ -6,6 +6,27 @@ const Home = () => {
   const inProgress = [
     {
       type: "pair",
+      title: "------",
+      medium: "Colored Pencil/Charcoal",
+      description: "-----",
+      left: {
+        src: `${import.meta.env.BASE_URL}images/In Process.jpg`,
+        alt: "Left image",
+      },
+      right: {
+        src: `${import.meta.env.BASE_URL}images/Drawing 2_4a.jpg`,
+        alt: "Right image",
+      },
+    },
+    {
+      type: "video",
+      src: `${import.meta.env.BASE_URL}videos/Drawing 2.MOV`,
+      title: "Process Video",
+      medium: "Short Clip",
+      description: "A behind the scenes look.",
+    },
+    {
+      type: "pair",
       title: "Shield Maiden",
       medium: "Colored Pencil/Charcoal",
       description:
@@ -29,13 +50,13 @@ const Home = () => {
       medium: "Short Clip",
       description: "A behind the scenes look.",
     },
-    {
-      type: "image",
-      src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
-      title: "In Progress Image 2",
-      medium: "Oil and Gold Leaf on Canvas",
-      description: "-----",
-    },
+    // {
+    //   type: "image",
+    //   src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
+    //   title: "In Progress Image 2",
+    //   medium: "Oil and Gold Leaf on Canvas",
+    //   description: "-----",
+    // },
   ];
 
   return (

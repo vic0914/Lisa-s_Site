@@ -5,6 +5,13 @@ const Work = () => {
   const paintings = [
     {
       type: "image",
+      src: `${import.meta.env.BASE_URL}images/Drawing 2_4a.jpg`,
+      title: "-----",
+      medium: "-----",
+      description: "------",
+    },
+    {
+      type: "image",
       src: `${
         import.meta.env.BASE_URL
       }images/Judith-and-the-Head-of-Holofernes.png`,

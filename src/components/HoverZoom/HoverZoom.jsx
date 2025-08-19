@@ -20,11 +20,11 @@ export default function HoverZoom({
   useEffect(() => {
     const checkMobile = () => {
       // Check if device supports hover and has a fine pointer (mouse)
-      const hasHover = window.matchMedia('(hover: hover)').matches;
-      const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+      const hasHover = window.matchMedia("(hover: hover)").matches;
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
       setIsMobile(!(hasHover && hasFinePointer));
     };
-    
+
     checkMobile();
     // No need for resize listener since hover capability doesn't change
   }, []);
@@ -98,21 +98,34 @@ export default function HoverZoom({
         src={src}
         alt={alt}
         className={imgClassName}
-        onMouseEnter={!isMobile ? (e) => {
-          e.stopPropagation();
-          setShow(true);
-        } : undefined}
-        onMouseLeave={!isMobile ? (e) => {
-          e.stopPropagation();
-          setShow(false);
-        } : undefined}
-        onMouseMove={!isMobile ? (e) => {
-          e.stopPropagation();
-          handleMouseMove(e);
-        } : undefined}
+        onMouseEnter={
+          !isMobile
+            ? (e) => {
+                e.stopPropagation();
+                setShow(true);
+              }
+            : undefined
+        }
+        onMouseLeave={
+          !isMobile
+            ? (e) => {
+                e.stopPropagation();
+                setShow(false);
+              }
+            : undefined
+        }
+        onMouseMove={
+          !isMobile
+            ? (e) => {
+                e.stopPropagation();
+                handleMouseMove(e);
+              }
+            : undefined
+        }
         draggable={false}
       />
-      {!isMobile && show &&
+      {!isMobile &&
+        show &&
         ReactDOM.createPortal(
           <div
             className="hover-zoom-popup"
