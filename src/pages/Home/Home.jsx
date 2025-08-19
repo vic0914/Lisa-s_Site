@@ -6,15 +6,18 @@ const Home = () => {
   const inProgress = [
     {
       type: "pair",
-      title: "------",
+      title: "Empress of the Unseen War",
       medium: "Colored Pencil/Charcoal",
-      description: "-----",
+      description:
+        "This drawing is a celebration of detail and design. I’m having fun exploring texture, symmetry, and the elegance of traditional adornment.\
+       Each pin and coil is a chance to play with form and precision. It’s a satisfying challenge—balancing beauty and complexity while staying tuned to\
+        the quiet harmony between technique and ornament.",
       left: {
-        src: `${import.meta.env.BASE_URL}images/In Process.jpg`,
+        src: `${import.meta.env.BASE_URL}images/In-Process-3.jpg`,
         alt: "Left image",
       },
       right: {
-        src: `${import.meta.env.BASE_URL}images/Drawing 2_4a.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
         alt: "Right image",
       },
     },

@@ -5,10 +5,13 @@ const Work = () => {
   const paintings = [
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Drawing 2_4a.jpg`,
-      title: "-----",
-      medium: "-----",
-      description: "------",
+      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
+      title: "Empress of the Unseen War",
+      medium: "Colored Pencil/Charcoal",
+      description:
+        "Empress of the Unseen War portrays a young aristocrat whose brocade jacket is not mere ornamentation, but ceremonial armor woven from ancestral memory and personal defiance. Her gaze is composed, not cold; her silence is not submission, but strategy. She is the sovereign of battles fought in shadow—internal, inherited, and invisible to those who measure strength only in spectacle.\
+      This work explores the tension between inherited identity and self-forged power. The intricate hairstyle and gold adornments evoke a lineage steeped in tradition, while her posture and presence suggest a warrior who has chosen her own myth. She is not waiting to be crowned—she is already reigning, quietly reshaping the legacy she carries.\
+      Inspired by Klimt’s symbolic richness and the visual language of regal myth, this piece invites viewers to consider the wars we wage without witness, and the nobility found in resilience rather than recognition.",
     },
     {
       type: "image",
