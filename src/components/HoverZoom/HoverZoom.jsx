@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 export default function HoverZoom({
   src,
   alt = "",
-  magnification = 2.0,
-  size = 200,
+  magnification = 3,
+  size = 250,
   wrapperClassName = "",
   imgClassName = "",
 }) {
