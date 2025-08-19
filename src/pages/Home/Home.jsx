@@ -13,7 +13,7 @@ const Home = () => {
        Each pin and coil is a chance to play with form and precision. It’s a satisfying challenge—balancing beauty and complexity while staying tuned to\
         the quiet harmony between technique and ornament.",
       left: {
-        src: `${import.meta.env.BASE_URL}images/In-Process-3.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Empress-Process.jpg`,
         alt: "Left image",
       },
       right: {
@@ -23,7 +23,7 @@ const Home = () => {
     },
     {
       type: "video",
-      src: `${import.meta.env.BASE_URL}videos/Drawing 2.MOV`,
+      src: `${import.meta.env.BASE_URL}videos/Empress-Process.MOV`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
@@ -38,28 +38,21 @@ const Home = () => {
          The unfinished parts, like the partly drawn hair and incomplete gilded ornamentation, show the layering process,\
           giving you a peek into the transformation from a raw sketch to a polished icon. ",
       left: {
-        src: `${import.meta.env.BASE_URL}images/In-Progress-1.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Process.jpg`,
         alt: "Left image",
       },
       right: {
-        src: `${import.meta.env.BASE_URL}images/Untitled-Image.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
         alt: "Right image",
       },
     },
     {
       type: "video",
-      src: `${import.meta.env.BASE_URL}videos/Process.MOV`,
+      src: `${import.meta.env.BASE_URL}videos/Shield-Maiden-Process.MOV`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
     },
-    // {
-    //   type: "image",
-    //   src: `${import.meta.env.BASE_URL}images/In-Progress-2.png`,
-    //   title: "In Progress Image 2",
-    //   medium: "Oil and Gold Leaf on Canvas",
-    //   description: "-----",
-    // },
   ];
 
   return (

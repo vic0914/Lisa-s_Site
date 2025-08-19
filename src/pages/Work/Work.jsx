@@ -52,7 +52,7 @@ const Work = () => {
 
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Untitled-Image.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
       title: "Shield Maiden",
       medium: "Colored Pencil/Charcoal",
       description:
