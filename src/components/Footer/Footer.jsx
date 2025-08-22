@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaInstagram } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -7,6 +8,16 @@ const Footer = () => {
   };
   return (
     <footer className="site-footer">
+      <div className="footer-social">
+        <a
+          href="https://www.instagram.com/lisalisatomlin/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instagram-link"
+        >
+          <FaInstagram size={32} />
+        </a>
+      </div>
       <div className="footer-links">
         <Link to="/" onClick={scrollToTop}>
           Home

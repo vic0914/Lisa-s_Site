@@ -6,6 +6,22 @@
   font-family: "Cormorant Garamond", serif;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.instagram-link {
+  color: #e5d7c0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #c6aa6a;
+  transform: scale(1.1);
+}
+
 .footer-links {
   display: flex;
   justify-content: center;
