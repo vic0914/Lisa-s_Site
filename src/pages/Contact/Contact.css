@@ -61,6 +61,7 @@
   border: 1px solid #ccc;
   border-radius: 0;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -71,7 +72,7 @@
 
 .submit-wrapper {
   margin-top: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .submit-button {
@@ -82,7 +83,6 @@
   border-radius: 0;
   font-size: 1rem;
   cursor: pointer;
-  margin-left: 100px;
 }
 
 /* --- Mobile layout --- */

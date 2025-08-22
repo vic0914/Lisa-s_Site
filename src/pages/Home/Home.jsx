@@ -7,7 +7,7 @@ const Home = () => {
     {
       type: "pair",
       title: "Empress of the Unseen War",
-      medium: "Colored Pencil/Charcoal",
+      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       description:
         "This drawing is a celebration of detail and design. I’m having fun exploring texture, symmetry, and the elegance of traditional adornment.\
        Each pin and coil is a chance to play with form and precision. It’s a satisfying challenge—balancing beauty and complexity while staying tuned to\
@@ -31,7 +31,7 @@ const Home = () => {
     {
       type: "pair",
       title: "Shield Maiden",
-      medium: "Colored Pencil/Charcoal",
+      medium: "Colored and Pastel Pencil/Charcoal",
       description:
         "This drawing-in-progress captures a delicate balance between classical reverence and contemporary craftsmanship.\
          I love creating lifelike depth with softly blended shading and paying close attention to facial features. \

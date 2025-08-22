@@ -26,6 +26,21 @@ const Footer = () => {
       </div>
       <div className="footer-copy">
         © {new Date().getFullYear()} Lisa Tomlin. All rights reserved.
+        <div style={{ marginTop: "15px" }}>
+          Website by{" "}
+          <a
+            href="https://www.linkedin.com/in/victor-rabadan"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+              cursor: "pointer",
+            }}
+          >
+            Victor Rabadan
+          </a>
+        </div>
       </div>
     </footer>
   );
