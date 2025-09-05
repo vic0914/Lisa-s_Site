@@ -6,7 +6,7 @@ const Work = () => {
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
-      title: "Shield Maiden: Awakening",
+      title: "Shield Maiden: The Awakening",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       description:
         "In Shield Maiden: The Awakening, I explore the duality of vulnerability and strength.\
