@@ -5,6 +5,31 @@ const Work = () => {
   const paintings = [
     {
       type: "image",
+      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+      title: "Shield Maiden: Awakening",
+      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
+      description:
+        "In Shield Maiden: The Awakening, I explore the duality of vulnerability and strength.\
+         Her gaze may be soft, but her stance is firm. She is not yet a warrior, but the world is already shaping her into one.\
+          The shield she holds is both protection and promise—a symbol of the burdens she will carry and the battles she will face.\
+           This piece is a tribute to the quiet courage that precedes action, and to every soul who prepares to meet the world not with fear, but with fierce grace.",
+    },
+
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
+      title: "Shield Maiden",
+      medium: "Colored and Pastel Pencil/Charcoal",
+      description:
+        "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a\
+         form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense,\
+         gilded, mosaic-like patterns that surround her, evoking both protection and reverence. The shield is not simply a weapon,\
+          but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a\
+          form of defiance and stillness, a quiet assertion of power.",
+    },
+
+    {
+      type: "image",
       src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
       title: "Empress of the Unseen War",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
@@ -48,31 +73,6 @@ const Work = () => {
       Balancing the ancient with the futuristic, the painting suggests that our aspirations are not simply\
       forward-facing, but rooted in who we have been. It is a vision of what we might become when we\
       honor the past while shaping the\u00A0future.",
-    },
-
-    {
-      type: "image",
-      src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
-      title: "Shield Maiden",
-      medium: "Colored and Pastel Pencil/Charcoal",
-      description:
-        "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a\
-         form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense,\
-         gilded, mosaic-like patterns that surround her, evoking both protection and reverence. The shield is not simply a weapon,\
-          but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a\
-          form of defiance and stillness, a quiet assertion of power.",
-    },
-
-    {
-      type: "image",
-      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
-      title: "Shield Maiden Awakening",
-      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
-      description:
-        "In Shield Maiden: The Awakening, I explore the duality of vulnerability and strength.\
-         Her gaze may be soft, but her stance is firm. She is not yet a warrior, but the world is already shaping her into one.\
-          The shield she holds is both protection and promise—a symbol of the burdens she will carry and the battles she will face.\
-           This piece is a tribute to the quiet courage that precedes action, and to every soul who prepares to meet the world not with fear, but with fierce grace.",
     },
   ];
 
