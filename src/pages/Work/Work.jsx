@@ -62,6 +62,18 @@ const Work = () => {
           but an emblem of resilience, heritage, and the unseen battles carried through history. In Shield Maiden, beauty becomes a\
           form of defiance and stillness, a quiet assertion of power.",
     },
+
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+      title: "Shield Maiden Awakening",
+      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
+      description:
+        "In Shield Maiden: The Awakening, I explore the duality of vulnerability and strength.\
+         Her gaze may be soft, but her stance is firm. She is not yet a warrior, but the world is already shaping her into one.\
+          The shield she holds is both protection and promise—a symbol of the burdens she will carry and the battles she will face.\
+           This piece is a tribute to the quiet courage that precedes action, and to every soul who prepares to meet the world not with fear, but with fierce grace.",
+    },
   ];
 
   return (

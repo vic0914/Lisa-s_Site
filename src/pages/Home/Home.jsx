@@ -53,6 +53,33 @@ const Home = () => {
       medium: "Short Clip",
       description: "A behind the scenes look.",
     },
+    {
+      type: "pair",
+      title: "Shield Maiden: The Awakening",
+      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
+      description:
+        "This piece is still finding its final shape, with copper leaf shimmering and scattering like confetti around the portrait.\
+         The loose flakes and stray brush marks feel like little secrets of the process, as if the painting is dressing up before stepping out into the world. ",
+      left: {
+        src: `${
+          import.meta.env.BASE_URL
+        }images/Shield-Maiden-Awakening-Process.jpg`,
+        alt: "Left image",
+      },
+      right: {
+        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+        alt: "Right image",
+      },
+    },
+    {
+      type: "video",
+      src: `${
+        import.meta.env.BASE_URL
+      }videos/Shield-Maiden-Awakening-Process.mov`,
+      title: "Process Video",
+      medium: "Short Clip",
+      description: "A behind the scenes look.",
+    },
   ];
 
   return (
