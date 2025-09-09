@@ -15,6 +15,27 @@ const Awards = () => {
   return (
     <div className="awards-page">
       <h1>Awards & Recognition</h1>
+
+      <div className="award-entry">
+        <span className="award-year">2025</span>
+        <div className="award-header">
+          <h2>Best In Medium 2025 Art Awards - Camelback Gallery</h2>
+
+          <button
+            className="certificate-button"
+            onClick={() =>
+              handleOpen(
+                `${import.meta.env.BASE_URL}certificates/Award09-25.jpg`
+              )
+            }
+          >
+            View Certificate
+          </button>
+        </div>
+        <p>"Empress of the Unseen War" - Lisa Tomlin</p>
+        <p className="placement">Finalist Award</p>
+      </div>
+
       <div className="award-entry">
         <span className="award-year">2025</span>
         <div className="award-header">
