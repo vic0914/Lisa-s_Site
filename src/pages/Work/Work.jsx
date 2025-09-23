@@ -5,9 +5,18 @@ const Work = () => {
   const paintings = [
     {
       type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg`,
+      title: "Aphrodite",
+      medium: "Colored Pencil/Pastel/Gold Leaf",
+      description:
+        "In Aphrodite, I wanted to reimagine the goddess not as a passive muse, but as a force—radiant, self-possessed, and undeniably modern.\
+       The gold leaf draws from Klimt’s language of opulence and reverence, yet her gaze belongs to today: confident, unapologetic, and entirely her own.",
+    },
+    {
+      type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
       title: "Shield Maiden: The Awakening",
-      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
+      medium: "Colored Pencil/Pastel/Copper Leaf",
       description:
         "In Shield Maiden: The Awakening, I explore the duality of vulnerability and strength.\
          Her gaze may be soft, but her stance is firm. She is not yet a warrior, but the world is already shaping her into one.\
@@ -19,7 +28,7 @@ const Work = () => {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
       title: "Shield Maiden",
-      medium: "Colored and Pastel Pencil/Charcoal",
+      medium: "Colored Pencil/Pastel",
       description:
         "Shield Maiden is conceived not as a traditional warrior, but as a timeless guardian—her elegance itself a\
          form of armor. The soft, luminous rendering of her face and figure is deliberately juxtaposed against the dense,\
@@ -32,7 +41,7 @@ const Work = () => {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
       title: "Empress of the Unseen War",
-      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
+      medium: "Colored Pencil/Pastel/Copper Leaf",
       description:
         "Empress of the Unseen War portrays a young aristocrat whose brocade jacket is not mere ornamentation, but ceremonial armor woven from ancestral memory and personal defiance. Her gaze is composed, not cold; her silence is not submission, but strategy. She is the sovereign of battles fought in shadow—internal, inherited, and invisible to those who measure strength only in spectacle.\
       This work explores the tension between inherited identity and self-forged power. The intricate hairstyle and gold adornments evoke a lineage steeped in tradition, while her posture and presence suggest a warrior who has chosen her own myth. She is not waiting to be crowned—she is already reigning, quietly reshaping the legacy she carries.\
