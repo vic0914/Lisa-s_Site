@@ -1,11 +1,11 @@
-// import "./Work.css";
-import Carousel from "../../components/Carousel/Carousel";
+import "./Work.css";
+import GalleryItem from "../../components/GalleryItem/GalleryItem";
 
 const Work = () => {
   const paintings = [
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Sheild-Maiden-web.jpg`,
       title: "Shield Maiden: The Awakening",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       description:
@@ -30,7 +30,9 @@ const Work = () => {
 
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
+      src: `${
+        import.meta.env.BASE_URL
+      }images/Empress-of-the-Unseen-War-web.jpg`,
       title: "Empress of the Unseen War",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       description:
@@ -74,11 +76,26 @@ const Work = () => {
       forward-facing, but rooted in who we have been. It is a vision of what we might become when we\
       honor the past while shaping the\u00A0future.",
     },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-web.jpg`,
+      title: "Aphrodite",
+    },
   ];
 
   return (
-    <div>
-      <Carousel items={paintings} />
+    <div className="work-page">
+      {paintings.map((painting, index) => (
+        <GalleryItem
+          key={index}
+          image={painting.src}
+          title={painting.title}
+          onClick={() => {
+            // TODO: Navigate to detail page
+            console.log(`Clicked on: ${painting.title}`);
+          }}
+        />
+      ))}
     </div>
   );
 };

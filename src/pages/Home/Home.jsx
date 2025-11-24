@@ -1,8 +1,26 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
+import { useRef, useState } from "react";
+import { GiLobArrow } from "react-icons/gi";
 
 const Home = () => {
+  const videoRef = useRef(null);
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+    setShowOverlay(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+    setShowOverlay(false);
+  };
   const inProgress = [
     {
       type: "pair",
@@ -87,17 +105,39 @@ const Home = () => {
   return (
     <div className="home-page">
       <section className="hero-section">
-        <img
-          src={`${import.meta.env.BASE_URL}images/Hero-Image.jpg`}
-          alt="Lisa artwork"
-          className="hero-image"
-        />
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <h1>Symbolism, Power, and the Sacred Feminine</h1>
-          <Link to="/work" className="hero-button">
-            Explore Gallery
-          </Link>
+        <div
+          className="hero-left"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <video
+            ref={videoRef}
+            className="hero-video"
+            src={`${import.meta.env.BASE_URL}videos/Lisa CloseUp.MOV`}
+            muted
+            loop
+            playsInline
+          />
+          <div className={`video-overlay ${showOverlay ? "show" : ""}`}>
+            <Link to="/about" className="about-button">
+              About
+            </Link>
+            <GiLobArrow className="lob-arrow" />
+          </div>
+        </div>
+        <div className="hero-right">
+          <img
+            src={`${import.meta.env.BASE_URL}images/Hero-Image.jpg`}
+            alt="Lisa artwork"
+            className="hero-image"
+          />
+          <div className="hero-overlay" />
+          <div className="hero-content">
+            <h1>Symbolism, Power, and the Sacred Feminine</h1>
+            <Link to="/work" className="hero-button">
+              Explore Gallery
+            </Link>
+          </div>
         </div>
       </section>
 
