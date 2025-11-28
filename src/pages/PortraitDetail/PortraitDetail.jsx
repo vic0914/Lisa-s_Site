@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
-import "./Work.css";
-import GalleryItem from "../../components/GalleryItem/GalleryItem";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
+import HoverZoom from "../../components/HoverZoom/HoverZoom";
+import "./PortraitDetail.css";
 
-const Work = () => {
+const PortraitDetail = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
 
+  // Same paintings data as Work page
   const paintings = [
     {
       type: "image",
@@ -91,20 +93,35 @@ her gaze exudes confidence, unapologetic and entirely her own.",
     },
   ];
 
+  const portraitIndex = parseInt(id);
+  const portrait = paintings[portraitIndex];
+
+  // Redirect if invalid ID
+  if (!portrait || isNaN(portraitIndex)) {
+    return <Navigate to="/work" replace />;
+  }
+
   return (
-    <div className="work-page">
-      {paintings.map((painting, index) => (
-        <GalleryItem
-          key={index}
-          image={painting.src}
-          title={painting.title}
-          onClick={() => {
-            navigate(`/work/${index}`);
-          }}
-        />
-      ))}
+    <div className="portrait-detail-page">
+      <button className="back-button" onClick={() => navigate("/work")}>
+        ← Back to Gallery
+      </button>
+      <div className="portrait-detail-container">
+        <div className="portrait-image-section">
+          <HoverZoom src={portrait.src} alt={portrait.title} />
+        </div>
+        <div className="portrait-info-section">
+          <h1 className="portrait-title">{portrait.title}</h1>
+          {portrait.medium && (
+            <p className="portrait-medium">{portrait.medium}</p>
+          )}
+          {portrait.description && (
+            <p className="portrait-description">{portrait.description}</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Work;
+export default PortraitDetail;
