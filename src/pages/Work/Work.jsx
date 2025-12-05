@@ -19,9 +19,7 @@ her gaze exudes confidence, unapologetic and entirely her own.",
     },
     {
       type: "image",
-      src: `${
-        import.meta.env.BASE_URL
-      }images/Empress-of-the-Unseen-War-web.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War-web.jpg`,
       title: "Empress of the Unseen War",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       description:
@@ -72,9 +70,7 @@ her gaze exudes confidence, unapologetic and entirely her own.",
     },
     {
       type: "image",
-      src: `${
-        import.meta.env.BASE_URL
-      }images/Judith-and-the-Head-of-Holofernes.png`,
+      src: `${import.meta.env.BASE_URL}images/Judith-and-the-Head-of-Holofernes.png`,
       title: "Judith and the Head of Holofernes",
       medium: "Oil and Gold Leaf on Canvas",
       description:

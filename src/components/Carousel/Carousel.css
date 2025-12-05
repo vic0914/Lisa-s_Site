@@ -142,7 +142,9 @@
 /* Fade animations reused for media/text/description */
 .fade-in,
 .fade-out {
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
 }
 
 .fade-in {

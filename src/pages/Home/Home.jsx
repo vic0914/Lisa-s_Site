@@ -1,24 +1,17 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { GiLobArrow } from "react-icons/gi";
 
 const Home = () => {
-  const videoRef = useRef(null);
   const [showOverlay, setShowOverlay] = useState(false);
 
   const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
     setShowOverlay(true);
   };
 
   const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
     setShowOverlay(false);
   };
   const inProgress = [
@@ -30,9 +23,7 @@ const Home = () => {
         "This piece is still finding its final shape, with copper leaf shimmering and scattering like confetti around the portrait.\
          The loose flakes and stray brush marks feel like little secrets of the process, as if the painting is dressing up before stepping out into the world. ",
       left: {
-        src: `${
-          import.meta.env.BASE_URL
-        }images/Shield-Maiden-Awakening-Process.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening-Process.jpg`,
         alt: "Left image",
       },
       right: {
@@ -42,9 +33,7 @@ const Home = () => {
     },
     {
       type: "video",
-      src: `${
-        import.meta.env.BASE_URL
-      }videos/Shield-Maiden-Awakening-Process.mov`,
+      src: `${import.meta.env.BASE_URL}videos/Shield-Maiden-Awakening-Process.mov`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
@@ -105,18 +94,11 @@ const Home = () => {
   return (
     <div className="home-page">
       <section className="hero-section">
-        <div
-          className="hero-left"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <video
-            ref={videoRef}
-            className="hero-video"
-            src={`${import.meta.env.BASE_URL}videos/Lisa CloseUp.MOV`}
-            muted
-            loop
-            playsInline
+        <div className="hero-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <img
+            src={`${import.meta.env.BASE_URL}images/Lisa-Pic.PNG`}
+            alt="Lisa Tomlin"
+            className="hero-image-left"
           />
           <div className={`video-overlay ${showOverlay ? "show" : ""}`}>
             <Link to="/about" className="about-button">

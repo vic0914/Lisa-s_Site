@@ -29,6 +29,14 @@
   display: block;
 }
 
+.home-page .hero-image-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .home-page .video-overlay {
   position: absolute;
   inset: 0;
@@ -85,7 +93,7 @@
 .home-page .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   filter: brightness(0.65);
 }

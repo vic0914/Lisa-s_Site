@@ -4,9 +4,9 @@
 
 ### Home Page
 - Split hero section into two equal halves (50/50)
-- **Left side**: Video (`Lisa CloseUp.MOV`) that plays on hover
-- **Right side**: Original hero image with "Explore Gallery" button
-- Added overlay on video hover with arrow icon and "About" button linking to About page
+- **Left side**: Image (`Lisa-Pic.PNG`) with hover overlay showing "About" button
+- **Right side**: Hero artwork image with "Explore Gallery" button
+- Both images use `object-fit: cover` to fill containers without whitespace
 - Set fixed height of 500px for hero section
 - Implemented responsive mobile layout (sections stack vertically)
 
@@ -25,8 +25,16 @@
 - Created new page at route `/work/:id` for individual portrait viewing
 - Layout: Centered container with max-width 800px
 - Image section (left, fixed 300px width) with HoverZoom functionality
-- Info section (right) displays title, medium, and description
+- Info section (right) displays title, medium, size, and description
+- Added portrait size field (e.g., "Bristol Vellum 22 x 30\"") under medium
 - "Back to Gallery" button at top-left to return to Work page
+- "Inquire About Purchase" button below description, navigates to Contact page
+- Button styling: Transparent background with dark border, fills dark on hover
+- **Media thumbnails**: Image and video thumbnails (100px each) below main display
+- Clicking thumbnails toggles between image and video views
+- Video thumbnail shows play button overlay
+- Active thumbnail indicated with border and shadow
+- Videos autoplay with controls when selected
 - Responsive layout maintains side-by-side structure on all screen sizes
 - Positioned closer to header with top padding
 
