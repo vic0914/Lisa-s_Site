@@ -37,6 +37,12 @@
 - Videos autoplay with controls when selected
 - Responsive layout maintains side-by-side structure on all screen sizes
 - Positioned closer to header with top padding
+- **Aphrodite Triptych titles**: Three paintings display two-line titles:
+  - Line 1: "Aphrodite Triptych: Journey of a Goddess"
+  - Line 2: Panel designation (I, II, or III) with painting name
+  - Uses smaller font size (1.15rem) via `.portrait-title-triptych` class
+- **Spacing adjustment**: Size line positioned closer to medium line (negative margin-top)
+- **AI video disclaimer**: Added note below "Inquire About Purchase" button stating "AI video shown for display purposes only" in italic, light gray text
 
 ## Branch
 All changes made on `feature/work-page-redesign` branch

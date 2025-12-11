@@ -13,7 +13,8 @@ const PortraitDetail = () => {
   const paintings = [
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite-web.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV`,
       title: "Aphrodite",
       medium: "Colored Pencil/Pastel/Gold Leaf on Bristol Vellum",
       size: 'Bristol Vellum 22 x 30"',
@@ -24,8 +25,35 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War-web.jpg`,
-      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Empress.MOV`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV`,
+      title: "Aphrodite Ascendant",
+      medium: "Acrylic/Gold Leaf",
+      size: 'Cradled Panel 16 x 16"',
+      description: `The opening panel of the Aphrodite Triptych: Journey of a Goddess presents a youthful Aphrodite emerging in serene radiance. Her upward gaze, gilded halo, and ocean-evoking ornaments frame her as beauty’s origin—calm, elevated, and luminous—introducing Aphrodite as a divine force rising into presence.`,
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV`,
+      title: "Aphrodite Enthroned",
+      medium: "Acrylic/Gold Leaf",
+      size: 'Cradled Panel 16 x 16"',
+      description: `In this central work of the Aphrodite Triptych: Journey of a Goddess, the goddess appears fully empowered. Her poised expression, golden latticework, and jeweled adornments portray love’s commanding duality—tender yet formidable. This panel emphasizes Aphrodite’s sovereign beauty and confident influence at the height of her mythic authority.`,
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV`,
+      title: "Aphrodite Eternal",
+      medium: "Acrylic/Gold Leaf",
+      size: 'Cradled Panel 16 x 16"',
+      description: `Completing the Aphrodite Triptych: Journey of a Goddess, this panel reveals Aphrodite as a timeless cosmic presence. Against deep blue, her golden ornaments glow like constellations. Her serene, powerful gaze conveys enduring beauty and desire, presenting the goddess as an eternal force beyond the boundaries of mortal experience.`,
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
       title: "Empress of the Unseen War",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
       size: 'Bristol Vellum 22 x 30"',
@@ -36,7 +64,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Sheild-Maiden-web.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
       title: "Shield Maiden: The Awakening",
       medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
@@ -49,6 +77,7 @@ const PortraitDetail = () => {
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV`,
       title: "Shield Maiden",
       medium: "Colored and Pastel Pencil/Charcoal",
       size: 'Bristol Vellum 22 x 30"',
@@ -136,13 +165,31 @@ const PortraitDetail = () => {
           )}
         </div>
         <div className="portrait-info-section">
-          <h1 className="portrait-title">{portrait.title}</h1>
+          {portrait.title === "Aphrodite Ascendant" ? (
+            <h1 className="portrait-title-triptych">
+              Aphrodite Triptych: Journey of a Goddess<br />
+              Panel I — Aphrodite Ascendant
+            </h1>
+          ) : portrait.title === "Aphrodite Enthroned" ? (
+            <h1 className="portrait-title-triptych">
+              Aphrodite Triptych: Journey of a Goddess<br />
+              Panel II — Aphrodite Enthroned
+            </h1>
+          ) : portrait.title === "Aphrodite Eternal" ? (
+            <h1 className="portrait-title-triptych">
+              Aphrodite Triptych: Journey of a Goddess<br />
+              Panel III — Aphrodite Eternal
+            </h1>
+          ) : (
+            <h1 className="portrait-title">{portrait.title}</h1>
+          )}
           {portrait.medium && <p className="portrait-medium">{portrait.medium}</p>}
           {portrait.size && <p className="portrait-size">{portrait.size}</p>}
           {portrait.description && <p className="portrait-description">{portrait.description}</p>}
           <button className="inquire-button" onClick={() => navigate("/contact")}>
             Inquire About Purchase
           </button>
+          <p className="video-disclaimer">AI video shown for display purposes only</p>
         </div>
       </div>
     </div>

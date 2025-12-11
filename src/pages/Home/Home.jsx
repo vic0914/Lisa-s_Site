@@ -23,7 +23,7 @@ const Home = () => {
         "This piece is still finding its final shape, with copper leaf shimmering and scattering like confetti around the portrait.\
          The loose flakes and stray brush marks feel like little secrets of the process, as if the painting is dressing up before stepping out into the world. ",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening-Process.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Shield-Maiden-Awakening.jpg`,
         alt: "Left image",
       },
       right: {
@@ -33,7 +33,7 @@ const Home = () => {
     },
     {
       type: "video",
-      src: `${import.meta.env.BASE_URL}videos/Shield-Maiden-Awakening-Process.mov`,
+      src: `${import.meta.env.BASE_URL}videos/Process-Shield-Maiden-Awakening.mov`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
@@ -49,7 +49,7 @@ const Home = () => {
          The unfinished parts, like the partly drawn hair and incomplete gilded ornamentation, show the layering process,\
           giving you a peek into the transformation from a raw sketch to a polished icon. ",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Process.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Shield-Maiden.jpg`,
         alt: "Left image",
       },
       right: {
@@ -59,7 +59,7 @@ const Home = () => {
     },
     {
       type: "video",
-      src: `${import.meta.env.BASE_URL}videos/Shield-Maiden-Process.MOV`,
+      src: `${import.meta.env.BASE_URL}videos/Process-Shield-Maiden.MOV`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",
@@ -74,7 +74,7 @@ const Home = () => {
        Each pin and coil is a chance to play with form and precision. It’s a satisfying challenge—balancing beauty and complexity while staying tuned to\
         the quiet harmony between technique and ornament.",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Empress-Process.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Empress-of-the-Unseen-War.jpg`,
         alt: "Left image",
       },
       right: {
@@ -84,7 +84,7 @@ const Home = () => {
     },
     {
       type: "video",
-      src: `${import.meta.env.BASE_URL}videos/Empress-Process.MOV`,
+      src: `${import.meta.env.BASE_URL}videos/Process-Empress-of-the-Unseen-War.MOV`,
       title: "Process Video",
       medium: "Short Clip",
       description: "A behind the scenes look.",

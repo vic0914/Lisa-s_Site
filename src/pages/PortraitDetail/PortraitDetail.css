@@ -127,6 +127,15 @@
   margin: 0;
 }
 
+.portrait-title-triptych {
+  font-family: "Cinzel", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
 .portrait-medium {
   font-family: "Cormorant Garamond", serif;
   font-size: 1rem;
@@ -148,6 +157,7 @@
   font-size: 0.95rem;
   color: #666;
   margin: 0;
+  margin-top: -0.5rem;
 }
 
 .inquire-button {
@@ -167,6 +177,15 @@
 .inquire-button:hover {
   background-color: #333;
   color: #fff;
+}
+
+.video-disclaimer {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #888;
+  margin: 0;
+  margin-top: -0.5rem;
 }
 
 /* Tablet and mobile - keep side-by-side but adjust */
