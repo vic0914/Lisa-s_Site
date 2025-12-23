@@ -1,19 +1,9 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
-import { useState } from "react";
 import { GiLobArrow } from "react-icons/gi";
 
 const Home = () => {
-  const [showOverlay, setShowOverlay] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowOverlay(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowOverlay(false);
-  };
   const inProgress = [
     {
       type: "pair",
@@ -94,13 +84,13 @@ const Home = () => {
   return (
     <div className="home-page">
       <section className="hero-section">
-        <div className="hero-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className="hero-left">
           <img
-            src={`${import.meta.env.BASE_URL}images/Lisa-Pic.PNG`}
+            src={`${import.meta.env.BASE_URL}images/Lisa-pic.png`}
             alt="Lisa Tomlin"
             className="hero-image-left"
           />
-          <div className={`video-overlay ${showOverlay ? "show" : ""}`}>
+          <div className="video-overlay">
             <Link to="/about" className="about-button">
               About
             </Link>

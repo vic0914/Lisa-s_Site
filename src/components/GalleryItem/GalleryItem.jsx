@@ -1,6 +1,6 @@
 import "./GalleryItem.css";
 
-const GalleryItem = ({ image, title, onClick }) => {
+const GalleryItem = ({ image, title, panel, onClick }) => {
   return (
     <div className="gallery-item">
       <img
@@ -9,7 +9,10 @@ const GalleryItem = ({ image, title, onClick }) => {
         className="gallery-item-image"
         onClick={onClick}
       />
-      <h2 className="gallery-item-title">{title}</h2>
+      <div className="gallery-item-title-container">
+        <h2 className="gallery-item-title">{title}</h2>
+        {panel && <div className="gallery-item-panel">{panel}</div>}
+      </div>
     </div>
   );
 };

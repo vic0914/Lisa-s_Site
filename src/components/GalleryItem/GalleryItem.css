@@ -19,12 +19,26 @@
   opacity: 0.85;
 }
 
-.gallery-item-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #000;
+.gallery-item-title-container {
   margin-top: 1rem;
+  text-align: center;
+}
+
+.gallery-item-title {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6e4b3a;
+  margin: 0;
+  text-align: center;
+}
+
+.gallery-item-panel {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6e4b3a;
+  margin: 0;
   text-align: center;
 }
 
@@ -39,7 +53,11 @@
   }
 
   .gallery-item-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+  }
+
+  .gallery-item-panel {
+    font-size: 1.4rem;
   }
 }
 
@@ -53,6 +71,10 @@
   }
 
   .gallery-item-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .gallery-item-panel {
+    font-size: 1.25rem;
   }
 }

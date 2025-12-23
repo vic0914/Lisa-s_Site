@@ -15,16 +15,19 @@ const Work = () => {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg`,
       title: "Aphrodite Ascendant",
+      panel: "Panel I",
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg`,
       title: "Aphrodite Enthroned",
+      panel: "Panel II",
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg`,
       title: "Aphrodite Eternal",
+      panel: "Panel III",
     },
     {
       type: "image",
@@ -61,6 +64,7 @@ const Work = () => {
           key={index}
           image={painting.src}
           title={painting.title}
+          panel={painting.panel}
           onClick={() => {
             navigate(`/work/${index}`);
           }}

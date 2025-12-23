@@ -7,7 +7,7 @@ import "./PortraitDetail.css";
 const PortraitDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [viewMode, setViewMode] = useState("image"); // "image" or "video"
+  const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
 
   // Same paintings data as Work page
   const paintings = [
@@ -16,101 +16,200 @@ const PortraitDetail = () => {
       src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV`,
       title: "Aphrodite",
-      medium: "Colored Pencil/Pastel/Gold Leaf on Bristol Vellum",
-      size: 'Bristol Vellum 22 x 30"',
-      description: `In 'Aphrodite', the first piece in the self-titled series, I wanted to portray the
-        goddess not as a passive muse, but as a vibrant, self-assured, and undeniably
-        contemporary figure. The gold leaf symbolizes opulence and reverence, while her gaze
-        exudes confidence, unapologetic and entirely her own.`,
+      medium: 'Original - Colored Pencil/Pastel/Gold Leaf on Bristol Vellum, 22 x 30"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
+      description: (
+        <>
+          In <em>Aphrodite</em>, the first piece in the self-titled series, I wanted to portray the
+          goddess not as a passive muse, but as a vibrant, self-assured, and undeniably
+          contemporary figure. The gold leaf symbolizes opulence and reverence, while her gaze
+          exudes confidence, unapologetic and entirely her own.
+        </>
+      ),
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-4.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV`,
       title: "Aphrodite Ascendant",
-      medium: "Acrylic/Gold Leaf",
-      size: 'Cradled Panel 16 x 16"',
-      description: `The opening panel of the Aphrodite Triptych: Journey of a Goddess presents a youthful Aphrodite emerging in serene radiance. Her upward gaze, gilded halo, and ocean-evoking ornaments frame her as beauty’s origin—calm, elevated, and luminous—introducing Aphrodite as a divine force rising into presence.`,
+      medium: 'Original - Acrylic/Gold Leaf on Cradled Panel, 16 x 16"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
+      description: (
+        <>
+          The opening panel of the <em>Aphrodite Triptych: Journey of a Goddess</em> presents a youthful Aphrodite emerging in serene radiance. Her upward gaze, gilded halo, and ocean-evoking ornaments frame her as beauty's origin—calm, elevated, and luminous—introducing Aphrodite as a divine force rising into presence.
+        </>
+      ),
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-1.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV`,
       title: "Aphrodite Enthroned",
-      medium: "Acrylic/Gold Leaf",
-      size: 'Cradled Panel 16 x 16"',
-      description: `In this central work of the Aphrodite Triptych: Journey of a Goddess, the goddess appears fully empowered. Her poised expression, golden latticework, and jeweled adornments portray love’s commanding duality—tender yet formidable. This panel emphasizes Aphrodite’s sovereign beauty and confident influence at the height of her mythic authority.`,
+      medium: 'Original - Acrylic/Gold Leaf on Cradled Panel 16 x 16"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
+      description: (
+        <>
+          In this central work of the <em>Aphrodite Triptych: Journey of a Goddess</em>, the goddess appears fully empowered. Her poised expression, golden latticework, and jeweled adornments portray love's commanding duality—tender yet formidable. This panel emphasizes Aphrodite's sovereign beauty and confident influence at the height of her mythic authority.
+        </>
+      ),
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-1.JPG` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-2.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV`,
       title: "Aphrodite Eternal",
-      medium: "Acrylic/Gold Leaf",
-      size: 'Cradled Panel 16 x 16"',
-      description: `Completing the Aphrodite Triptych: Journey of a Goddess, this panel reveals Aphrodite as a timeless cosmic presence. Against deep blue, her golden ornaments glow like constellations. Her serene, powerful gaze conveys enduring beauty and desire, presenting the goddess as an eternal force beyond the boundaries of mortal experience.`,
+      medium: 'Original - Acrylic/Gold Leaf on Cradled Panel 16 x 16"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
+      description: (
+        <>
+          Completing the <em>Aphrodite Triptych: Journey of a Goddess</em>, this panel reveals Aphrodite as a timeless cosmic presence. Against deep blue, her golden ornaments glow like constellations. Her serene, powerful gaze conveys enduring beauty and desire, presenting the goddess as an eternal force beyond the boundaries of mortal experience.
+        </>
+      ),
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-3.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
       title: "Empress of the Unseen War",
-      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
-      size: 'Bristol Vellum 22 x 30"',
+      medium:
+        'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A young aristocrat stands sovereign over battles fought in silence—internal,
         inherited, and unseen. Her ceremonial armor, woven from memory and defiance, evokes
         tradition while asserting self-forged power. Inspired by Klimt and mythic symbolism,
         this portrait honors quiet resilience and the nobility of strength unrecognized.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg` },
+        {
+          type: "video",
+          src: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
+        },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-4.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
       title: "Shield Maiden: The Awakening",
-      medium: "Colored and Pastel Pencil/Charcoal/Copper Leaf",
-      size: 'Bristol Vellum 22 x 30"',
+      medium:
+        'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A tribute to the quiet courage that precedes action. Her soft gaze and firm
         stance reflect the tension between vulnerability and emerging strength. The shield she
         holds is both protection and promise—marking the moment before she becomes a warrior
         shaped by the world.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg` },
+        {
+          type: "video",
+          src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
+        },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-4.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV`,
       title: "Shield Maiden",
-      medium: "Colored and Pastel Pencil/Charcoal",
-      size: 'Bristol Vellum 22 x 30"',
+      medium: 'Original - Colored and Pastel Pencil/Charcoal on Bristol Vellum 22 x 30"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
       description: `Not a warrior, but a guardian—her elegance is armor. Softly rendered against
         gilded, mosaic-like patterns, she embodies both protection and reverence. The shield
         symbolizes resilience and inherited struggle, while her stillness asserts beauty as
         quiet defiance.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-4.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Future-Aspirations.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV`,
       title: "Future Aspirations",
-      medium: "Oil and Gold Leaf on Canvas",
-      size: 'Canvas 30 x 40"',
+      medium: 'Original - Oil and Gold Leaf on Canvason Canvas 30 x 40"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A meditation on identity and transformation, this work balances the ancient with
         the futuristic. The central figure—part human, part machine—radiates poised strength
         within a golden halo, while a naturalistic counterpart evokes vulnerability. Between
         them, symbols trace a journey of growth and memory, suggesting that our aspirations
         honor the past even as they shape the future.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Future-Aspirations.png` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-4.jpg` },
+      ],
     },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Judith-and-the-Head-of-Holofernes.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV`,
       title: "Judith and the Head of Holofernes",
-      medium: "Oil and Gold Leaf on Canvas",
-      size: 'Canvas 24 x 36"',
+      medium: 'Original - Oil and Gold Leaf on Canvas on Canvas 24 x 36"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
       description: `Reimagined in the opulent style of Klimt's golden period, Judith appears as both
         executioner and icon. Her cool composure contrasts with the raw intensity of
         Holofernes' severed head, while gilded patterns and sacred adornments evoke divine
         authority. This work explores feminine strength, sacrifice, and justice, balancing
         beauty with brutality.`,
+      thumbnails: [
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Judith-and-the-Head-of-Holofernes.png`,
+        },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-4.jpg` },
+      ],
     },
   ];
 
@@ -130,54 +229,64 @@ const PortraitDetail = () => {
       <div className="portrait-detail-container">
         <div className="portrait-image-section">
           <div className="main-display">
-            {viewMode === "image" ? (
-              <HoverZoom src={portrait.src} alt={portrait.title} />
+            {portrait.thumbnails && portrait.thumbnails[selectedMediaIndex] ? (
+              portrait.thumbnails[selectedMediaIndex].type === "video" ? (
+                <video
+                  className="portrait-video"
+                  src={portrait.thumbnails[selectedMediaIndex].src}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                />
+              ) : (
+                <HoverZoom src={portrait.thumbnails[selectedMediaIndex].src} alt={portrait.title} />
+              )
             ) : (
-              <video
-                className="portrait-video"
-                src={portrait.videoSrc}
-                controls
-                autoPlay
-                loop
-                muted
-              />
+              <HoverZoom src={portrait.src} alt={portrait.title} />
             )}
           </div>
 
-          {portrait.videoSrc && (
+          {portrait.thumbnails && portrait.thumbnails.length > 0 && (
             <div className="thumbnail-container">
-              <div
-                className={`thumbnail ${viewMode === "image" ? "active" : ""}`}
-                onClick={() => setViewMode("image")}
-              >
-                <img src={portrait.src} alt={`${portrait.title} thumbnail`} />
-              </div>
-              <div
-                className={`thumbnail video-thumbnail ${viewMode === "video" ? "active" : ""}`}
-                onClick={() => setViewMode("video")}
-              >
-                <video src={portrait.videoSrc} />
-                <div className="play-overlay">
-                  <FaPlay />
+              {portrait.thumbnails.map((media, index) => (
+                <div
+                  key={index}
+                  className={`thumbnail ${media.type === "video" ? "video-thumbnail" : ""} ${selectedMediaIndex === index ? "active" : ""}`}
+                  onClick={() => setSelectedMediaIndex(index)}
+                >
+                  {media.type === "video" ? (
+                    <>
+                      <video src={media.src} />
+                      <div className="play-overlay">
+                        <FaPlay />
+                      </div>
+                    </>
+                  ) : (
+                    <img src={media.src} alt={`${portrait.title} thumbnail ${index + 1}`} />
+                  )}
                 </div>
-              </div>
+              ))}
             </div>
           )}
         </div>
         <div className="portrait-info-section">
           {portrait.title === "Aphrodite Ascendant" ? (
             <h1 className="portrait-title-triptych">
-              Aphrodite Triptych: Journey of a Goddess<br />
+              Aphrodite Triptych: Journey of a Goddess
+              <br />
               Panel I — Aphrodite Ascendant
             </h1>
           ) : portrait.title === "Aphrodite Enthroned" ? (
             <h1 className="portrait-title-triptych">
-              Aphrodite Triptych: Journey of a Goddess<br />
+              Aphrodite Triptych: Journey of a Goddess
+              <br />
               Panel II — Aphrodite Enthroned
             </h1>
           ) : portrait.title === "Aphrodite Eternal" ? (
             <h1 className="portrait-title-triptych">
-              Aphrodite Triptych: Journey of a Goddess<br />
+              Aphrodite Triptych: Journey of a Goddess
+              <br />
               Panel III — Aphrodite Eternal
             </h1>
           ) : (

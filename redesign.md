@@ -4,8 +4,9 @@
 
 ### Home Page
 - Split hero section into two equal halves (50/50)
-- **Left side**: Image (`Lisa-Pic.PNG`) with hover overlay showing "About" button
+- **Left side**: Image (`Lisa-Pic.PNG`) with permanent overlay (35% opacity), "About" button always visible with arrow above
 - **Right side**: Hero artwork image with "Explore Gallery" button
+- Both buttons vertically aligned using absolute positioning (centered at 50%)
 - Both images use `object-fit: cover` to fill containers without whitespace
 - Set fixed height of 500px for hero section
 - Implemented responsive mobile layout (sections stack vertically)
@@ -41,8 +42,19 @@
   - Line 1: "Aphrodite Triptych: Journey of a Goddess"
   - Line 2: Panel designation (I, II, or III) with painting name
   - Uses smaller font size (1.15rem) via `.portrait-title-triptych` class
-- **Spacing adjustment**: Size line positioned closer to medium line (negative margin-top)
+- **Spacing adjustment**: Size line has no spacing from medium line (margin-top: -1rem)
 - **AI video disclaimer**: Added note below "Inquire About Purchase" button stating "AI video shown for display purposes only" in italic, light gray text
+
+### Navigation & Scroll Behavior
+- **Scroll position preservation**: When navigating from Work page → Portrait Detail → back to Work page, scroll position is now preserved
+- Updated `ScrollToTop` component to save/restore scroll position using sessionStorage
+- Uses `useLayoutEffect` to prevent visual jumping
+- All other page navigation still scrolls to top as expected
+
+## Deployment
+- Configured for GoDaddy subdirectory preview deployment
+- Base URL set to `/preview/` in vite.config.js
+- Production build ready for upload to `yoursite.com/preview`
 
 ## Branch
 All changes made on `feature/work-page-redesign` branch
