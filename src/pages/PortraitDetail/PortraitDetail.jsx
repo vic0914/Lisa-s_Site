@@ -13,7 +13,7 @@ const PortraitDetail = () => {
   const paintings = [
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV`,
       title: "Aphrodite",
       medium: 'Original - Colored Pencil/Pastel/Gold Leaf on Bristol Vellum, 22 x 30"',
@@ -27,7 +27,7 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-2.jpg` },
@@ -37,7 +37,40 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite's Golden-Reign.MOV`,
+      title: "Aphrodite's Golden Reign",
+      medium: 'Original - Acrylic on Cradled Panel 16 x 16"',
+      description: `Aphrodite's Golden Reign began as a mortal figure who earned her celestial crown through acts of courage and compassion. She now stands as a radiant symbol of gilded royalty, a guardian of grace and power.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite's Golden-Reign.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned-2.MOV`,
+      title: "Aphrodite Enthroned",
+      medium: 'Original - Acrylic and Gold Leaf on Canvas 36 x 36"',
+      size: "SOLD",
+      description: `Aphrodite Enthroned is a warrior queen of a golden realm, crowned not by birth but by her own grace and courage. She's the keeper of love's strength and the guardian of her own destiny.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned-2.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV`,
       title: "Aphrodite Ascendant",
       medium: 'Original - Acrylic/Gold Leaf on Cradled Panel, 16 x 16"',
@@ -48,7 +81,7 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Ascendant.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-2.jpg` },
@@ -58,7 +91,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV`,
       title: "Aphrodite Enthroned",
       medium: 'Original - Acrylic/Gold Leaf on Cradled Panel 16 x 16"',
@@ -69,7 +102,7 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Enthroned.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-1.JPG` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-2.jpg` },
@@ -79,7 +112,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV`,
       title: "Aphrodite Eternal",
       medium: 'Original - Acrylic/Gold Leaf on Cradled Panel 16 x 16"',
@@ -90,7 +123,7 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Eternal.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-2.jpg` },
@@ -98,9 +131,91 @@ const PortraitDetail = () => {
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-3.jpg` },
       ],
     },
+    // --- Sentinel Series (indices 6–10) ---
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Young-Sentinel.MOV`,
+      title: "Young Sentinel",
+      medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
+      description: `The Young Sentinel is the newly anointed protector of her realm, just stepping into a world where her courage is still budding. She's full of curiosity, learning her lineage's ancient secrets, and eager to prove that she's ready for whatever comes next.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Young-Sentinel.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Emerging-Sentinel.MOV`,
+      title: "Emerging Sentinel",
+      medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
+      description: `The Emerging Sentinel is stepping into her own strength, facing her first real challenge. She stands at the threshold of growth, learning to trust her instincts as she evolves from novice to courageous guardian.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Emerging-Sentinel.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Seasoned-Sentinel.MOV`,
+      title: "Seasoned Sentinel",
+      medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
+      description: `The Seasoned Sentinel is a veteran protector, rich with experience. She's weathered many challenges, her instincts sharpened by time, and she now stands as a mentor figure. She balances wisdom with calm authority, guiding others with a steady hand.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Seasoned-Sentinel.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Noble-Sentinel.MOV`,
+      title: "Noble Sentinel",
+      medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
+      description: `The Noble Sentinel carries herself with a timeless regal grace, a true guardian of tradition. She embodies dignity and honor, blending old wisdom with modern leadership. She's the anchor of the sentinel line, embodying the legacy they all stand for.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Noble-Sentinel.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Eternal-Sentinel.MOV`,
+      title: "Eternal Sentinel",
+      medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
+      description: `The Eternal Sentinel is a timeless guardian, embodying wisdom that transcends eras. Rooted in ancient knowledge yet always looking forward, she's a beacon of continuity and enduring strength.`,
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Eternal-Sentinel.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-4.jfif` },
+      ],
+    },
+    // --- Other Series (indices 9–13) ---
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
       title: "Empress of the Unseen War",
       medium:
@@ -111,7 +226,7 @@ const PortraitDetail = () => {
         tradition while asserting self-forged power. Inspired by Klimt and mythic symbolism,
         this portrait honors quiet resilience and the nobility of strength unrecognized.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg` },
         {
           type: "video",
           src: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
@@ -124,7 +239,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
       title: "Shield Maiden: The Awakening",
       medium:
@@ -135,7 +250,7 @@ const PortraitDetail = () => {
         holds is both protection and promise—marking the moment before she becomes a warrior
         shaped by the world.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg` },
         {
           type: "video",
           src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
@@ -148,7 +263,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
+      src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV`,
       title: "Shield Maiden",
       medium: 'Original - Colored and Pastel Pencil/Charcoal on Bristol Vellum 22 x 30"',
@@ -158,7 +273,7 @@ const PortraitDetail = () => {
         symbolizes resilience and inherited struggle, while her stillness asserts beauty as
         quiet defiance.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-2.jpg` },
@@ -168,7 +283,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Future-Aspirations.png`,
+      src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV`,
       title: "Future Aspirations",
       medium: 'Original - Oil and Gold Leaf on Canvason Canvas 30 x 40"',
@@ -179,7 +294,7 @@ const PortraitDetail = () => {
         them, symbols trace a journey of growth and memory, suggesting that our aspirations
         honor the past even as they shape the future.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Future-Aspirations.png` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-2.jpg` },
@@ -189,7 +304,7 @@ const PortraitDetail = () => {
     },
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Judith-and-the-Head-of-Holofernes.png`,
+      src: `${import.meta.env.BASE_URL}images/Other-Series/Judith-and-the-Head-of-Holofernes.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV`,
       title: "Judith and the Head of Holofernes",
       medium: 'Original - Oil and Gold Leaf on Canvas on Canvas 24 x 36"',
@@ -202,7 +317,7 @@ const PortraitDetail = () => {
       thumbnails: [
         {
           type: "image",
-          src: `${import.meta.env.BASE_URL}images/Judith-and-the-Head-of-Holofernes.png`,
+          src: `${import.meta.env.BASE_URL}images/Other-Series/Judith-and-the-Head-of-Holofernes.png`,
         },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-1.jpg` },

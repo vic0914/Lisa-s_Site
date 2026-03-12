@@ -86,7 +86,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-left">
           <img
-            src={`${import.meta.env.BASE_URL}images/Lisa-pic.png`}
+            src={`${import.meta.env.BASE_URL}images/UI-Images/Lisa-Pic.PNG`}
             alt="Lisa Tomlin"
             className="hero-image-left"
           />
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
         <div className="hero-right">
           <img
-            src={`${import.meta.env.BASE_URL}images/Hero-Image.jpg`}
+            src={`${import.meta.env.BASE_URL}images/UI-Images/Hero-Image.jpg`}
             alt="Lisa artwork"
             className="hero-image"
           />

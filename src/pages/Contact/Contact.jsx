@@ -52,7 +52,7 @@ const Contact = () => {
       <h1 className="contact-title">Contact Lisa</h1>
       <div className="contact-content">
         <img
-          src={`${import.meta.env.BASE_URL}images/Contact-Image.jpg`}
+          src={`${import.meta.env.BASE_URL}images/UI-Images/Contact-Image.jpg`}
           alt="Lisa"
           className="contact-image"
         />

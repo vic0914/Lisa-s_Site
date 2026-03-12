@@ -4,14 +4,29 @@
   padding: 4rem 2rem;
 }
 
-@media (max-width: 768px) {
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  align-items: start;
+}
+
+.work-column-title {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6e4b3a;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
   .work-page {
     padding: 2rem 1rem;
   }
-}
 
-@media (max-width: 420px) {
-  .work-page {
-    padding: 1.5rem 0.75rem;
+  .work-grid {
+    grid-template-columns: 1fr;
   }
 }
