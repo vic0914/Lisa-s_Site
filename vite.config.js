@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: "/Lisa-s_Site/",
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/Lisa-s_Site/" : "/",
   plugins: [react()],
-});
+}));
