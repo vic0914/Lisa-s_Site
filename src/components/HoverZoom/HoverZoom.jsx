@@ -85,7 +85,7 @@ export default function HoverZoom({
 
     setPosition({ x: finalX, y: finalY });
     setZoomStyle({
-      backgroundImage: `url(${src})`,
+      backgroundImage: `url("${src}")`,
       backgroundSize: `${bgWidth}px ${bgHeight}px`,
       backgroundPosition: `-${offsetX}px -${offsetY}px`,
     });

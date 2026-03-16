@@ -13,37 +13,16 @@ const PortraitDetail = () => {
   const paintings = [
     {
       type: "image",
-      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg`,
-      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV`,
-      title: "Aphrodite",
-      medium: 'Original - Colored Pencil/Pastel/Gold Leaf on Bristol Vellum, 22 x 30"',
-      size: "Custom sizes are available for both canvas and giclee prints.",
-      description: (
-        <>
-          In <em>Aphrodite</em>, the first piece in the self-titled series, I wanted to portray the
-          goddess not as a passive muse, but as a vibrant, self-assured, and undeniably
-          contemporary figure. The gold leaf symbolizes opulence and reverence, while her gaze
-          exudes confidence, unapologetic and entirely her own.
-        </>
-      ),
-      thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg` },
-        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-4.jpg` },
-      ],
-    },
-    {
-      type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite's Golden-Reign.MOV`,
       title: "Aphrodite's Golden Reign",
       medium: 'Original - Acrylic on Cradled Panel 16 x 16"',
-      description: `Aphrodite's Golden Reign began as a mortal figure who earned her celestial crown through acts of courage and compassion. She now stands as a radiant symbol of gilded royalty, a guardian of grace and power.`,
+      description: (<><em>Aphrodite's Golden Reign</em> began as a mortal figure who earned her celestial crown through acts of courage and compassion. She now stands as a radiant symbol of gilded royalty, a guardian of grace and power.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite's Golden-Reign.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-2.jfif` },
@@ -55,17 +34,20 @@ const PortraitDetail = () => {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned-2.MOV`,
-      title: "Aphrodite Enthroned",
+      title: "Aphrodite's Gilded Gaze",
       medium: 'Original - Acrylic and Gold Leaf on Canvas 36 x 36"',
       size: "SOLD",
-      description: `Aphrodite Enthroned is a warrior queen of a golden realm, crowned not by birth but by her own grace and courage. She's the keeper of love's strength and the guardian of her own destiny.`,
+      description: (<><em>Aphrodite's Gilded Gaze</em> unveils a regal Aphrodite, her eyes bold and knowing, capturing both the viewer's reverence and her own timeless strength. It's an ode to elegance and power.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned-2.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-Enthroned-2-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-4.jfif` },
       ],
     },
     {
@@ -77,11 +59,17 @@ const PortraitDetail = () => {
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: (
         <>
-          The opening panel of the <em>Aphrodite Triptych: Journey of a Goddess</em> presents a youthful Aphrodite emerging in serene radiance. Her upward gaze, gilded halo, and ocean-evoking ornaments frame her as beauty's origin—calm, elevated, and luminous—introducing Aphrodite as a divine force rising into presence.
+          The opening panel of the <em>Aphrodite Triptych: Journey of a Goddess</em> presents a
+          youthful Aphrodite emerging in serene radiance. Her upward gaze, gilded halo, and
+          ocean-evoking ornaments frame her as beauty's origin—calm, elevated, and
+          luminous—introducing Aphrodite as a divine force rising into presence.
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-2.jpg` },
@@ -98,11 +86,17 @@ const PortraitDetail = () => {
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: (
         <>
-          In this central work of the <em>Aphrodite Triptych: Journey of a Goddess</em>, the goddess appears fully empowered. Her poised expression, golden latticework, and jeweled adornments portray love's commanding duality—tender yet formidable. This panel emphasizes Aphrodite's sovereign beauty and confident influence at the height of her mythic authority.
+          In this central work of the <em>Aphrodite Triptych: Journey of a Goddess</em>, the goddess
+          appears fully empowered. Her poised expression, golden latticework, and jeweled adornments
+          portray love's commanding duality—tender yet formidable. This panel emphasizes Aphrodite's
+          sovereign beauty and confident influence at the height of her mythic authority.
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-1.JPG` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-2.jpg` },
@@ -119,11 +113,17 @@ const PortraitDetail = () => {
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: (
         <>
-          Completing the <em>Aphrodite Triptych: Journey of a Goddess</em>, this panel reveals Aphrodite as a timeless cosmic presence. Against deep blue, her golden ornaments glow like constellations. Her serene, powerful gaze conveys enduring beauty and desire, presenting the goddess as an eternal force beyond the boundaries of mortal experience.
+          Completing the <em>Aphrodite Triptych: Journey of a Goddess</em>, this panel reveals
+          Aphrodite as a timeless cosmic presence. Against deep blue, her golden ornaments glow like
+          constellations. Her serene, powerful gaze conveys enduring beauty and desire, presenting
+          the goddess as an eternal force beyond the boundaries of mortal experience.
         </>
       ),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-2.jpg` },
@@ -131,16 +131,43 @@ const PortraitDetail = () => {
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-3.jpg` },
       ],
     },
-    // --- Sentinel Series (indices 6–10) ---
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV`,
+      title: "Aphrodite",
+      medium: 'Original - Colored Pencil/Pastel/Gold Leaf on Bristol Vellum, 22 x 30"',
+      size: "Custom sizes are available for both canvas and giclee prints.",
+      description: (
+        <>
+          In <em>Aphrodite</em>, the first piece in the self-titled series, I wanted to portray the
+          goddess not as a passive muse, but as a vibrant, self-assured, and undeniably contemporary
+          figure. The gold leaf symbolizes opulence and reverence, while her gaze exudes confidence,
+          unapologetic and entirely her own.
+        </>
+      ),
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-4.jpg` },
+      ],
+    },
+    // --- Sentinel Series ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Young-Sentinel.MOV`,
       title: "Young Sentinel",
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
-      description: `The Young Sentinel is the newly anointed protector of her realm, just stepping into a world where her courage is still budding. She's full of curiosity, learning her lineage's ancient secrets, and eager to prove that she's ready for whatever comes next.`,
+      description: (<>The <em>Young Sentinel</em> is the newly anointed protector of her realm, just stepping into a world where her courage is still budding. She's full of curiosity, learning her lineage's ancient secrets, and eager to prove that she's ready for whatever comes next.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Young-Sentinel.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-2.jfif` },
@@ -154,9 +181,12 @@ const PortraitDetail = () => {
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Emerging-Sentinel.MOV`,
       title: "Emerging Sentinel",
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
-      description: `The Emerging Sentinel is stepping into her own strength, facing her first real challenge. She stands at the threshold of growth, learning to trust her instincts as she evolves from novice to courageous guardian.`,
+      description: (<>The <em>Emerging Sentinel</em> is stepping into her own strength, facing her first real challenge. She stands at the threshold of growth, learning to trust her instincts as she evolves from novice to courageous guardian.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Emerging-Sentinel.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-2.jfif` },
@@ -170,9 +200,12 @@ const PortraitDetail = () => {
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Seasoned-Sentinel.MOV`,
       title: "Seasoned Sentinel",
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
-      description: `The Seasoned Sentinel is a veteran protector, rich with experience. She's weathered many challenges, her instincts sharpened by time, and she now stands as a mentor figure. She balances wisdom with calm authority, guiding others with a steady hand.`,
+      description: (<>The <em>Seasoned Sentinel</em> is a veteran protector, rich with experience. She's weathered many challenges, her instincts sharpened by time, and she now stands as a mentor figure. She balances wisdom with calm authority, guiding others with a steady hand.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Seasoned-Sentinel.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-2.jfif` },
@@ -186,9 +219,12 @@ const PortraitDetail = () => {
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Noble-Sentinel.MOV`,
       title: "Noble Sentinel",
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
-      description: `The Noble Sentinel carries herself with a timeless regal grace, a true guardian of tradition. She embodies dignity and honor, blending old wisdom with modern leadership. She's the anchor of the sentinel line, embodying the legacy they all stand for.`,
+      description: (<>The <em>Noble Sentinel</em> carries herself with a timeless regal grace, a true guardian of tradition. She embodies dignity and honor, blending old wisdom with modern leadership. She's the anchor of the sentinel line, embodying the legacy they all stand for.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Noble-Sentinel.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-2.jfif` },
@@ -202,9 +238,12 @@ const PortraitDetail = () => {
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Eternal-Sentinel.MOV`,
       title: "Eternal Sentinel",
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
-      description: `The Eternal Sentinel is a timeless guardian, embodying wisdom that transcends eras. Rooted in ancient knowledge yet always looking forward, she's a beacon of continuity and enduring strength.`,
+      description: (<>The <em>Eternal Sentinel</em> is a timeless guardian, embodying wisdom that transcends eras. Rooted in ancient knowledge yet always looking forward, she's a beacon of continuity and enduring strength.</>),
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Eternal-Sentinel.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-1.jfif` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-2.jfif` },
@@ -212,7 +251,6 @@ const PortraitDetail = () => {
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-4.jfif` },
       ],
     },
-    // --- Other Series (indices 9–13) ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
@@ -226,7 +264,10 @@ const PortraitDetail = () => {
         tradition while asserting self-forged power. Inspired by Klimt and mythic symbolism,
         this portrait honors quiet resilience and the nobility of strength unrecognized.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
+        },
         {
           type: "video",
           src: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
@@ -237,6 +278,7 @@ const PortraitDetail = () => {
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-4.jpg` },
       ],
     },
+    // --- Other Series ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
@@ -250,7 +292,10 @@ const PortraitDetail = () => {
         holds is both protection and promise—marking the moment before she becomes a warrior
         shaped by the world.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
+        },
         {
           type: "video",
           src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
@@ -286,7 +331,7 @@ const PortraitDetail = () => {
       src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV`,
       title: "Future Aspirations",
-      medium: 'Original - Oil and Gold Leaf on Canvason Canvas 30 x 40"',
+      medium: 'Original - Oil and Gold Leaf on Canvas 30 x 40"',
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A meditation on identity and transformation, this work balances the ancient with
         the futuristic. The central figure—part human, part machine—radiates poised strength
@@ -294,7 +339,10 @@ const PortraitDetail = () => {
         them, symbols trace a journey of growth and memory, suggesting that our aspirations
         honor the past even as they shape the future.`,
       thumbnails: [
-        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png` },
+        {
+          type: "image",
+          src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png`,
+        },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-1.jpg` },
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-2.jpg` },
@@ -307,7 +355,7 @@ const PortraitDetail = () => {
       src: `${import.meta.env.BASE_URL}images/Other-Series/Judith-and-the-Head-of-Holofernes.png`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV`,
       title: "Judith and the Head of Holofernes",
-      medium: 'Original - Oil and Gold Leaf on Canvas on Canvas 24 x 36"',
+      medium: 'Original - Oil and Gold Leaf on Canvas 24 x 36"',
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: `Reimagined in the opulent style of Klimt's golden period, Judith appears as both
         executioner and icon. Her cool composure contrasts with the raw intensity of

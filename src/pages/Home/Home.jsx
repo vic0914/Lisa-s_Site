@@ -13,11 +13,11 @@ const Home = () => {
         "This piece is still finding its final shape, with copper leaf shimmering and scattering like confetti around the portrait.\
          The loose flakes and stray brush marks feel like little secrets of the process, as if the painting is dressing up before stepping out into the world. ",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Process-Shield-Maiden-Awakening.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Images/Process-Shield-Maiden-Awakening.jpg`,
         alt: "Left image",
       },
       right: {
-        src: `${import.meta.env.BASE_URL}images/Shield-Maiden-Awakening.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
         alt: "Right image",
       },
     },
@@ -39,11 +39,11 @@ const Home = () => {
          The unfinished parts, like the partly drawn hair and incomplete gilded ornamentation, show the layering process,\
           giving you a peek into the transformation from a raw sketch to a polished icon. ",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Process-Shield-Maiden.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Images/Process-Shield-Maiden.jpg`,
         alt: "Left image",
       },
       right: {
-        src: `${import.meta.env.BASE_URL}images/Shield-Maiden.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden.jpg`,
         alt: "Right image",
       },
     },
@@ -64,11 +64,11 @@ const Home = () => {
        Each pin and coil is a chance to play with form and precision. It’s a satisfying challenge—balancing beauty and complexity while staying tuned to\
         the quiet harmony between technique and ornament.",
       left: {
-        src: `${import.meta.env.BASE_URL}images/Process-Empress-of-the-Unseen-War.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Process-Images/Process-Empress-of-the-Unseen-War.jpg`,
         alt: "Left image",
       },
       right: {
-        src: `${import.meta.env.BASE_URL}images/Empress-of-the-Unseen-War.jpg`,
+        src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
         alt: "Right image",
       },
     },

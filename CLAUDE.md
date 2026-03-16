@@ -4,94 +4,68 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a portfolio website for artist Lisa Tomlin, built with React 19, Vite 6, and Tailwind CSS 4. The site showcases artwork through an interactive gallery with custom carousel components supporting images, videos, and side-by-side comparisons.
+Portfolio website for artist Lisa Tomlin. Built with React 19, Vite 6, and Tailwind CSS 4. Deployed to GitHub Pages at `https://vic0914.github.io/Lisa-s_Site/`.
 
 ## Development Commands
 
 ```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Run linter
-npm run lint
-
-# Deploy to GitHub Pages
-npm run deploy
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run linter
+npm run deploy    # Build and deploy to GitHub Pages (runs predeploy + gh-pages)
 ```
 
-## Architecture
+## Pages & Routes
 
-### Routing & Pages
-The app uses React Router with a single-page application structure. All routes are defined in `src/App.jsx`:
-- `/` - Home page with hero section and in-progress work carousel
-- `/work` - Main gallery with completed artwork
-- `/about` - Artist biography
-- `/awards` - Exhibition history and accolades
-- `/contact` - Contact form integrated with EmailJS
+Defined in `src/App.jsx` using React Router (BrowserRouter):
 
-### Key Components
+| Route | Page | Description |
+|---|---|---|
+| `/` | Home | Hero, Klimt quote, in-progress carousel |
+| `/work` | Work | 3-column gallery grid (Aphrodite / Sentinel / Additional) |
+| `/work/:id` | PortraitDetail | Full detail view with thumbnails, AI video, description |
+| `/about` | About | Two-column bio layout |
+| `/awards` | Awards | Award list with modal certificate viewer |
+| `/contact` | Contact | EmailJS-powered form |
 
-**Carousel (`src/components/Carousel/Carousel.jsx`)**
-- Flexible carousel supporting three item types:
-  - `type: "image"` - Single image with HoverZoom
-  - `type: "video"` - Video player with poster and controls
-  - `type: "pair"` - Side-by-side image comparison (used for process/final views)
-- Props: `items` array with structure: `{ type, src, title?, medium?, description?, poster?, left?, right? }`
-- Automatically resets to first slide on route changes via `location.key`
-- Uses fade transitions (300ms) between slides
+## Key Components
 
-**HoverZoom (`src/components/HoverZoom/HoverZoom.jsx`)**
-- Wraps images to enable zoom on hover/click
-- Used throughout the site for all artwork displays
-- Maintains aspect ratio and provides smooth scaling
+- **Carousel** — Supports `image`, `video`, `pair` types. 300ms fade. Resets on route change.
+- **HoverZoom** — Desktop-only magnification popup via React portal. Mobile detection uses `(hover: hover) and (pointer: fine)` media queries, not viewport width.
+- **GalleryItem** — Clickable thumbnail with title/panel label. Used in Work grid.
+- **Header** — Responsive hamburger nav.
+- **ScrollToTop** — Uses `useLayoutEffect` (pre-paint) to restore scroll position when navigating back from portrait detail to work page (reads from `sessionStorage`). Scrolls to top for all other navigation.
+- **BackToTopButton** — Appears after 600px scroll. Detects footer overlap for styling.
 
-**Layout Components**
-- `Header` - Navigation bar with links to all pages
-- `Footer` - Site footer with social links
-- `ScrollToTop` - Automatically scrolls to top on route change
-- `BackToTopButton` - Floating button appears after scrolling past threshold (600px)
+## Artwork Data — Critical Duplication
 
-### Contact Form Integration
-Contact form (`src/pages/Contact/Contact.jsx`) uses EmailJS:
-- Service ID: `service_l636a5m`
-- Template ID: `template_v4tvhbk`
-- Public key: `C2vGMkUlCrB_ysIhO` (initialized in useEffect)
-- Form state managed with React hooks
-- Shows loading state during submission
+**Painting data is defined in two separate places and must be kept in sync:**
 
-### Asset Management
-- All images/videos are in `public/` directory
-- Paths use `import.meta.env.BASE_URL` prefix for proper resolution in production
-- Structure: `public/images/` and `public/videos/`
-- Certificates stored in `public/certificates/`
+- `src/pages/Work/Work.jsx` — Three arrays (`aphroditePaintings`, `sentinelPaintings`, `otherPaintings`) with `src`, `title`, optional `panel`.
+- `src/pages/PortraitDetail/PortraitDetail.jsx` — Single flat `paintings` array with full metadata. Order must exactly match Work page order since `/work/:id` uses a flat numeric index.
 
-### Styling
-- Tailwind CSS 4 configured via `@tailwindcss/cli`
-- Component-specific CSS files co-located with components
-- Global styles in `src/index.css` and `src/App.css`
-- Custom fonts: Cinzel, Cormorant Garamond, and Parisienne (loaded in `index.html`)
+**16 paintings total**: 6 Aphrodite (indices 0–5), 6 Sentinel (indices 6–11), 4 Additional (indices 12–15).
+Offsets in Work.jsx are computed dynamically: `SENTINEL_OFFSET = aphroditePaintings.length`, `OTHER_OFFSET = SENTINEL_OFFSET + sentinelPaintings.length`.
+
+Each painting in `PortraitDetail.jsx` has:
+- `src`, `title`, `medium` — required
+- `description` — string or JSX (triptych panels use JSX with `<em>`)
+- `size` — optional; used for availability info (e.g., `"SOLD"`, `"Custom sizes available..."`)
+- `videoSrc` — AI animation video
+- `thumbnails[]` — always 6 items: `[main image, AI video, WIP/detail ×4]`. Each item has `{ type: "image"|"video", src }`.
 
 ## Important Patterns
 
-### Adding New Artwork
-When adding artwork to the gallery:
-1. Place image/video files in `public/images/` or `public/videos/`
-2. Add item to the `paintings` or `inProgress` array in the relevant page component
-3. Use the appropriate carousel item type (`image`, `video`, or `pair`)
-4. Always prefix paths with `${import.meta.env.BASE_URL}`
-5. Include title, medium, and description for each piece
-
-### Route Changes and State Reset
-The Carousel component uses `useEffect` with `location.key || location.pathname` as a dependency to reset slide index on navigation. This ensures users always start at the first slide when visiting a page.
+- All asset paths must use `${import.meta.env.BASE_URL}` prefix (required for GitHub Pages subdirectory hosting).
+- Component-specific CSS files are co-located with each component.
+- `vite.config.js` sets `base: "/Lisa-s_Site/"` on build, `"/"` on dev.
 
 ## Deployment
-- Production builds are deployed to GitHub Pages via `gh-pages` package
-- Base URL is set to `/` in `vite.config.js`
-- Build output goes to `dist/` directory
-- Run `npm run deploy` to build and publish
+
+`npm run deploy` handles everything — builds then pushes `dist/` to the `gh-pages` branch. GitHub Pages serves from that branch. Allow 1-2 minutes for changes to propagate.
+
+## Future Development
+
+### Work Page — Mobile Tab/Filter Toggle
+On mobile, replace the 3-column grid with a tab bar at the top of the Work page (e.g., "Aphrodite | Sentinel | Additional"). Tapping a tab shows only that series as a single-column list. This keeps the UI clean, avoids long scrolling through mixed categories, and scales well if more series are added later.
