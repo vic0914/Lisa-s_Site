@@ -11,6 +11,7 @@ const PortraitDetail = () => {
 
   // Same paintings data as Work page
   const paintings = [
+    // --- Aphrodite Series (indices 0–5) ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif`,
@@ -19,15 +20,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 16 x 16"',
       description: (<><em>Aphrodite's Golden Reign</em> began as a mortal figure who earned her celestial crown through acts of courage and compassion. She now stands as a radiant symbol of gilded royalty, a guardian of grace and power.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite's-Golden-Reign.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite's Golden-Reign.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Golden-Reign-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Golden-Reign-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Golden-Reign-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Golden-Reign-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Golden-Reign-4.jfif` },
       ],
     },
     {
@@ -39,15 +37,12 @@ const PortraitDetail = () => {
       size: "SOLD",
       description: (<><em>Aphrodite's Gilded Gaze</em> unveils a regal Aphrodite, her eyes bold and knowing, capturing both the viewer's reverence and her own timeless strength. It's an ode to elegance and power.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned-2.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned-2.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Gilded-Gaze-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Gilded-Gaze-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Gilded-Gaze-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Gilded-Gaze-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Gilded-Gaze-4.jfif` },
       ],
     },
     {
@@ -66,15 +61,12 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Ascendant.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Ascendant.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Ascendant-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Ascendant-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Ascendant-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Ascendant-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-All-Triptych-1.jpg` },
       ],
     },
     {
@@ -93,15 +85,12 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Enthroned.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Enthroned.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-1.JPG` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Enthroned-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Enthroned-1.JPG` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Enthroned-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Enthroned-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-All-Triptych-2.jpg` },
       ],
     },
     {
@@ -120,15 +109,12 @@ const PortraitDetail = () => {
         </>
       ),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite-Eternal.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite-Eternal.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-All-Triptych-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Eternal-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Eternal-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Eternal-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-All-Triptych-3.jpg` },
       ],
     },
     {
@@ -149,13 +135,13 @@ const PortraitDetail = () => {
       thumbnails: [
         { type: "image", src: `${import.meta.env.BASE_URL}images/Aphrodite-Series/Aphrodite.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Aphrodite.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Aphrodite-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Aphrodite-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Aphrodite-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Aphrodite-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/aphrodite-series/TN-Aphrodite-4.jpg` },
       ],
     },
-    // --- Sentinel Series ---
+    // --- Sentinel Series (indices 6–11) ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif`,
@@ -164,15 +150,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
       description: (<>The <em>Young Sentinel</em> is the newly anointed protector of her realm, just stepping into a world where her courage is still budding. She's full of curiosity, learning her lineage's ancient secrets, and eager to prove that she's ready for whatever comes next.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Young-Sentinel-1.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Young-Sentinel.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Young-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Young-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Young-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Young-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Young-4.jfif` },
       ],
     },
     {
@@ -183,15 +166,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
       description: (<>The <em>Emerging Sentinel</em> is stepping into her own strength, facing her first real challenge. She stands at the threshold of growth, learning to trust her instincts as she evolves from novice to courageous guardian.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Emerging-Sentinel-2.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Emerging-Sentinel.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Emerging-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Emerging-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Emerging-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Emerging-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Emerging-4.jfif` },
       ],
     },
     {
@@ -202,15 +182,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
       description: (<>The <em>Seasoned Sentinel</em> is a veteran protector, rich with experience. She's weathered many challenges, her instincts sharpened by time, and she now stands as a mentor figure. She balances wisdom with calm authority, guiding others with a steady hand.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Seasoned-Sentinel-3.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Seasoned-Sentinel.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Seasoned-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Seasoned-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Seasoned-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Seasoned-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Seasoned-4.jfif` },
       ],
     },
     {
@@ -221,15 +198,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
       description: (<>The <em>Noble Sentinel</em> carries herself with a timeless regal grace, a true guardian of tradition. She embodies dignity and honor, blending old wisdom with modern leadership. She's the anchor of the sentinel line, embodying the legacy they all stand for.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Noble-Sentinel-4.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Noble-Sentinel.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Noble-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Noble-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Noble-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Noble-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Noble-4.jfif` },
       ],
     },
     {
@@ -240,15 +214,12 @@ const PortraitDetail = () => {
       medium: 'Original - Acrylic on Cradled Panel 12 x 12"',
       description: (<>The <em>Eternal Sentinel</em> is a timeless guardian, embodying wisdom that transcends eras. Rooted in ancient knowledge yet always looking forward, she's a beacon of continuity and enduring strength.</>),
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Sentinel-Series/Eternal-Sentinel-5.jfif` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Eternal-Sentinel.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-1.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-2.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-3.jfif` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Eternal-Sentinel-4.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Eternal-Sentinel-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Eternal-Sentinel-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Eternal-Sentinel-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Eternal-Sentinel-4.jfif` },
       ],
     },
     {
@@ -256,54 +227,40 @@ const PortraitDetail = () => {
       src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
       title: "Empress of the Unseen War",
-      medium:
-        'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
+      medium: 'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A young aristocrat stands sovereign over battles fought in silence—internal,
         inherited, and unseen. Her ceremonial armor, woven from memory and defiance, evokes
         tradition while asserting self-forged power. Inspired by Klimt and mythic symbolism,
         this portrait honors quiet resilience and the nobility of strength unrecognized.`,
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg`,
-        },
-        {
-          type: "video",
-          src: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV`,
-        },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Empress-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Empress-of-the-Unseen-War.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Empress-of-the-Unseen-War.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Empress-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Empress-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Empress-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/sentinel-series/TN-Empress-4.jpg` },
       ],
     },
-    // --- Other Series ---
+    // --- Additional Works (indices 12–15) ---
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
       videoSrc: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
       title: "Shield Maiden: The Awakening",
-      medium:
-        'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
+      medium: 'Original - Colored and Pastel Pencil/Charcoal/Copper Leaf on Bristol Vellum 22 x 30"',
       size: "Custom sizes are available for both canvas and giclee prints.",
       description: `A tribute to the quiet courage that precedes action. Her soft gaze and firm
         stance reflect the tension between vulnerability and emerging strength. The shield she
         holds is both protection and promise—marking the moment before she becomes a warrior
         shaped by the world.`,
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg`,
-        },
-        {
-          type: "video",
-          src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV`,
-        },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Awakening-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden-Awakening.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden-The-Awakening.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Awakening-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Awakening-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Awakening-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Awakening-4.jpg` },
       ],
     },
     {
@@ -320,10 +277,10 @@ const PortraitDetail = () => {
       thumbnails: [
         { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Shield-Maiden.jpg` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Shield-Maiden.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Shield-Maiden-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Shield-Maiden-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Shield-Maiden-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Shield-Maiden-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Shield-Maiden-4.jpg` },
       ],
     },
     {
@@ -339,15 +296,12 @@ const PortraitDetail = () => {
         them, symbols trace a journey of growth and memory, suggesting that our aspirations
         honor the past even as they shape the future.`,
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Future-Aspirations.png` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Future-Aspirations.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Future-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Future-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Future-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Future-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Future-4.jpg` },
       ],
     },
     {
@@ -363,15 +317,60 @@ const PortraitDetail = () => {
         authority. This work explores feminine strength, sacrifice, and justice, balancing
         beauty with brutality.`,
       thumbnails: [
-        {
-          type: "image",
-          src: `${import.meta.env.BASE_URL}images/Other-Series/Judith-and-the-Head-of-Holofernes.png`,
-        },
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Other-Series/Judith-and-the-Head-of-Holofernes.png` },
         { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Judith.MOV` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-1.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-2.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-3.jpg` },
-        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/TN-Judith-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Judith-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Judith-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Judith-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Judith-4.jpg` },
+      ],
+    },
+    // --- Silver Belles Series (indices 16–18) ---
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Anticipating-Her-Next-Move.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Anticipating-Her-Next-Move.MOV`,
+      title: "Anticipating Her Next Move",
+      medium: 'Original - Acrylic and Silver Leaf on Cradled Panel 16 x 16"',
+      description: "Here, she stands poised, a portrait of elegance on the verge of decision. The piece captures that delicate, suspended moment of anticipation, encouraging reflection before moving forward.",
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Anticipating-Her-Next-Move.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Anticipating-Her-Next-Move.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Anticipating-Her-Next-Move-Interior-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Anticipating-Her-Next-Move-Interior-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Anticipating-Her-Next-Move-Interior-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Anticipating-Her-Next-Move-Interior-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Modern-Belle.jfif`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Modern-Belle .MOV`,
+      title: "Modern Belle",
+      medium: 'Original - Acrylic and Silver Leaf on Cradled Panel 16 x 16"',
+      description: "She is a modern-day icon, combining classic sophistication with a contemporary edge. Her presence bridges the elegant grace of the past and the bold allure of the present, inviting onlookers to see tradition reimagined.",
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Modern-Belle.jfif` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Modern-Belle .MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Modern-Belle-Interior-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Modern-Belle-Interior-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Modern-Belle-Interior-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Modern-Belle-Interior-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Reflecting-in-Living-Marble.jpg`,
+      title: "Reflecting in Living Marble",
+      medium: 'Original - Acrylic and Silver Leaf on Cradled Panel 16 x 16"',
+      description: "In this piece, she is a figure merging gracefully with a marble-like surface, almost as if she's contemplating her own transformation. It's about blending identity and art—a living statue in that reflective moment.",
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Reflecting-in-Living-Marble.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Reflecting-in-Living-Marble-Interior-1.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Reflecting-in-Living-Marble-Interior-2.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Reflecting-in-Living-Marble-Interior-3.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Reflecting-in-Living-Marble-Interior-4.jpg` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Reflecting-in-Living-Marble-Interior-5.jpg` },
       ],
     },
   ];
@@ -461,7 +460,9 @@ const PortraitDetail = () => {
           <button className="inquire-button" onClick={() => navigate("/contact")}>
             Inquire About Purchase
           </button>
-          <p className="video-disclaimer">AI video shown for display purposes only</p>
+          {portrait.thumbnails.some((t) => t.type === "video") && (
+            <p className="video-disclaimer">AI video shown for display purposes only</p>
+          )}
         </div>
       </div>
     </div>

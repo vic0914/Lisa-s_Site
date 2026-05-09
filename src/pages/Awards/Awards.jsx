@@ -16,17 +16,20 @@ const Awards = () => {
     <div className="awards-page">
       <h1>Awards & Recognition</h1>
       <div className="award-entry">
+        <span className="award-year">2026</span>
+        <h2>Uncomfortable Beauty Exhibition - Palm Gallery</h2>
+        <p>"Aphrodite Eternal" and "Aphrodite Ascendant" - Lisa Tomlin</p>
+        <p className="placement">Invited</p>
+      </div>
+
+      <div className="award-entry">
         <span className="award-year">2025</span>
         <div className="award-header">
           <h2>Artist Invitational 11 Art Awards - Camelback Gallery</h2>
 
           <button
             className="certificate-button"
-            onClick={() =>
-              handleOpen(
-                `${import.meta.env.BASE_URL}certificates/Award2025.png`
-              )
-            }
+            onClick={() => handleOpen(`${import.meta.env.BASE_URL}certificates/Award2025.png`)}
           >
             View Certificate
           </button>
@@ -42,11 +45,7 @@ const Awards = () => {
 
           <button
             className="certificate-button"
-            onClick={() =>
-              handleOpen(
-                `${import.meta.env.BASE_URL}certificates/Award2024.jpg`
-              )
-            }
+            onClick={() => handleOpen(`${import.meta.env.BASE_URL}certificates/Award2024.jpg`)}
           >
             View Certificate
           </button>
@@ -64,18 +63,14 @@ const Awards = () => {
 
       <div className="award-entry">
         <span className="award-year">2002</span>
-        <h2>
-          MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show
-        </h2>
+        <h2>MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show</h2>
         <p>"Queen of the Nile" - Lisa Tomlin</p>
         <p className="placement">Second Place</p>
       </div>
 
       <div className="award-entry">
         <span className="award-year">1997</span>
-        <h2>
-          MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show
-        </h2>
+        <h2>MasterWorks of New Mexico - Bardean Miniature Fine Art Juried Show</h2>
         <p>"Youth" - Lisa Tomlin</p>
         <p className="placement">Second Place</p>
       </div>

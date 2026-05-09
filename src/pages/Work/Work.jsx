@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { MdClear } from "react-icons/md";
 import "./Work.css";
 import GalleryItem from "../../components/GalleryItem/GalleryItem";
 
@@ -79,29 +80,52 @@ const otherPaintings = [
   },
 ];
 
+const silverBellesPaintings = [
+  {
+    src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Anticipating-Her-Next-Move.jfif`,
+    title: "Anticipating Her Next Move",
+  },
+  {
+    src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Modern-Belle.jfif`,
+    title: "Modern Belle",
+  },
+  {
+    src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Reflecting-in-Living-Marble.jpg`,
+    title: "Reflecting in Living Marble",
+  },
+];
+
 const SENTINEL_OFFSET = aphroditePaintings.length;
 const OTHER_OFFSET = SENTINEL_OFFSET + sentinelPaintings.length;
+const SILVER_BELLES_OFFSET = OTHER_OFFSET + otherPaintings.length;
 
 const TABS = [
-  { key: "aphrodite", label: "Aphrodite", paintings: aphroditePaintings, offset: 0 },
-  { key: "sentinel", label: "Sentinel", paintings: sentinelPaintings, offset: SENTINEL_OFFSET },
-  { key: "additional", label: "Additional", paintings: otherPaintings, offset: OTHER_OFFSET },
+  { key: "aphrodite", label: "Aphrodite", gridLabel: "Aphrodite Series", paintings: aphroditePaintings, offset: 0 },
+  { key: "sentinel", label: "Sentinel", gridLabel: "Sentinel Series", paintings: sentinelPaintings, offset: SENTINEL_OFFSET },
+  { key: "silver-belles", label: "Silver Belles", gridLabel: "Silver Belles Series", paintings: silverBellesPaintings, offset: SILVER_BELLES_OFFSET },
+  { key: "additional", label: "Additional", gridLabel: "Additional Works", paintings: otherPaintings, offset: OTHER_OFFSET },
 ];
 
 const Work = () => {
   const navigate = useNavigate();
+
   const [activeTab, setActiveTab] = useState(
-    () => sessionStorage.getItem("workActiveTab") || "aphrodite"
+    () => sessionStorage.getItem("workActiveTab") || "silver-belles"
   );
+
+  const [activeFilter, setActiveFilter] = useState(() => {
+    const stored = sessionStorage.getItem("workActiveFilter");
+    if (stored === "all") return null;
+    return stored || "silver-belles";
+  });
 
   useEffect(() => {
     sessionStorage.setItem("workActiveTab", activeTab);
   }, [activeTab]);
-  const maxRows = Math.max(
-    aphroditePaintings.length,
-    sentinelPaintings.length,
-    otherPaintings.length
-  );
+
+  useEffect(() => {
+    sessionStorage.setItem("workActiveFilter", activeFilter ?? "all");
+  }, [activeFilter]);
 
   const activeTabData = TABS.find((t) => t.key === activeTab);
 
@@ -133,50 +157,60 @@ const Work = () => {
         ))}
       </div>
 
-      {/* Desktop 3-column grid */}
-      <div className="work-grid">
-        <h2 className="work-column-title">Aphrodite Series</h2>
-        <h2 className="work-column-title">Sentinel Series</h2>
-        <h2 className="work-column-title">Additional Works</h2>
-
-        {Array.from({ length: maxRows }).map((_, rowIndex) => (
-          <React.Fragment key={rowIndex}>
-            {aphroditePaintings[rowIndex] ? (
-              <GalleryItem
-                image={aphroditePaintings[rowIndex].src}
-                title={aphroditePaintings[rowIndex].title}
-                panel={aphroditePaintings[rowIndex].panel}
-                onClick={() => navigate(`/work/${rowIndex}`)}
-              />
-            ) : (
-              <div />
-            )}
-
-            {sentinelPaintings[rowIndex] ? (
-              <GalleryItem
-                image={sentinelPaintings[rowIndex].src}
-                title={sentinelPaintings[rowIndex].title}
-                onClick={() => navigate(`/work/${SENTINEL_OFFSET + rowIndex}`)}
-              />
-            ) : (
-              <div />
-            )}
-
-            {otherPaintings[rowIndex] ? (
-              <GalleryItem
-                image={otherPaintings[rowIndex].src}
-                title={otherPaintings[rowIndex].title}
-                onClick={() => navigate(`/work/${OTHER_OFFSET + rowIndex}`)}
-              />
-            ) : (
-              <div />
-            )}
-          </React.Fragment>
+      {/* Desktop column filters */}
+      <div className="work-filters">
+        {TABS.map((tab) => (
+          <button
+            key={tab.key}
+            className={`work-filter-btn ${!activeFilter || activeFilter === tab.key ? "active" : ""}`}
+            onClick={() => setActiveFilter(tab.key)}
+          >
+            {tab.gridLabel}
+          </button>
         ))}
+        {activeFilter && (
+          <button className="work-filter-clear" onClick={() => setActiveFilter(null)}>
+            <MdClear />
+          </button>
+        )}
       </div>
+
+      {/* Desktop columns — flat grid, interleaved by row for true cross-column alignment */}
+      {(() => {
+        const visibleTabs = TABS.filter(
+          (tab) => !activeFilter || activeFilter === tab.key
+        );
+        const maxRows = Math.max(...visibleTabs.map((t) => t.paintings.length));
+        return (
+          <div className={`work-grid${activeFilter ? " work-grid--single" : ""}`}>
+            {/* Title row */}
+            {visibleTabs.map((tab) => (
+              <h2 key={`title-${tab.key}`} className="work-column-title">
+                {tab.gridLabel}
+              </h2>
+            ))}
+            {/* One painting per column per row */}
+            {Array.from({ length: maxRows }).flatMap((_, rowIndex) =>
+              visibleTabs.map((tab) => {
+                const painting = tab.paintings[rowIndex];
+                return painting ? (
+                  <GalleryItem
+                    key={`${tab.key}-${rowIndex}`}
+                    image={painting.src}
+                    title={painting.title}
+                    panel={painting.panel}
+                    onClick={() => navigate(`/work/${tab.offset + rowIndex}`)}
+                  />
+                ) : (
+                  <div key={`empty-${tab.key}-${rowIndex}`} />
+                );
+              })
+            )}
+          </div>
+        );
+      })()}
     </div>
   );
 };
 
 export default Work;
-
