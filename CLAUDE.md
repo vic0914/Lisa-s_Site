@@ -47,7 +47,7 @@ Defined in `src/App.jsx` using React Router (BrowserRouter, no basename):
 - `src/pages/Work/Work.jsx` — Four arrays (`aphroditePaintings`, `sentinelPaintings`, `silverBellesPaintings`, `otherPaintings`) with `src`, `title`, optional `panel`.
 - `src/pages/PortraitDetail/PortraitDetail.jsx` — Single flat `paintings` array with full metadata. Order must exactly match Work page order since `/work/:id` uses a flat numeric index.
 
-**19 paintings total**: 6 Aphrodite (indices 0–5), 6 Sentinel (indices 6–11), 4 Additional (indices 12–15), 3 Silver Belles (indices 16–18).
+**21 paintings total**: 6 Aphrodite (indices 0–5), 6 Sentinel (indices 6–11), 4 Additional (indices 12–15), 5 Silver Belles (indices 16–20).
 Offsets in Work.jsx are computed dynamically: `SENTINEL_OFFSET = aphroditePaintings.length`, `OTHER_OFFSET = SENTINEL_OFFSET + sentinelPaintings.length`, `SILVER_BELLES_OFFSET = OTHER_OFFSET + otherPaintings.length`.
 
 Each painting in `PortraitDetail.jsx` has:

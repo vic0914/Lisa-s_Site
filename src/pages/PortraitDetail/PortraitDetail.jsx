@@ -325,7 +325,39 @@ const PortraitDetail = () => {
         { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/additional-works/TN-Judith-4.jpg` },
       ],
     },
-    // --- Silver Belles Series (indices 16–18) ---
+    // --- Silver Belles Series (indices 16–20) ---
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Belle-of-the-Silver-Garden.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Belle-of-the-Silver-Garden.MOV`,
+      title: "Belle of the Silver Garden",
+      medium: 'Original - Acrylic and Silver Leaf on Cradled Panel 16 x 16"',
+      description: "She simply stands in quiet elegance, a presence of calm and thoughtful grace. This piece invites viewers to pause and appreciate a moment of simple, useful elegance.",
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Belle-of-the-Silver-Garden.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Belle-of-the-Silver-Garden.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Belle-of-the-Silver-Garden-Interior-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Belle-of-the-Silver-Garden-Interior-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Belle-of-the-Silver-Garden-Interior-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Belle-of-the-Silver-Garden-Interior-4.jfif` },
+      ],
+    },
+    {
+      type: "image",
+      src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Silver-Spark-of-Innocence.jpg`,
+      videoSrc: `${import.meta.env.BASE_URL}videos/AI-Silver-Spark-of-Innocence.MOV`,
+      title: "Silver Spark of Innocence",
+      medium: 'Original - Acrylic and Silver Leaf on Cradled Panel 16 x 16"',
+      description: "She stands, a silver-tinged portrait of youthful elegance, caught in that delicate pause before a decision. This piece invites viewers into her reflective moment, capturing innocence and anticipation in a single breath.",
+      thumbnails: [
+        { type: "image", src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Silver-Spark-of-Innocence.jpg` },
+        { type: "video", src: `${import.meta.env.BASE_URL}videos/AI-Silver-Spark-of-Innocence.MOV` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Silver-Spark-Interior-1.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Silver-Spark-Interior-2.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Silver-Spark-Interior-3.jfif` },
+        { type: "image", src: `${import.meta.env.BASE_URL}thumb-nails/silver-belle-series/TN-Silver-Spark-Interior-4.jfif` },
+      ],
+    },
     {
       type: "image",
       src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Anticipating-Her-Next-Move.jfif`,

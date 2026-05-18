@@ -82,6 +82,14 @@ const otherPaintings = [
 
 const silverBellesPaintings = [
   {
+    src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Belle-of-the-Silver-Garden.jpg`,
+    title: "Belle of the Silver Garden",
+  },
+  {
+    src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Silver-Spark-of-Innocence.jpg`,
+    title: "Silver Spark of Innocence",
+  },
+  {
     src: `${import.meta.env.BASE_URL}images/Silver-Belle-Series/Anticipating-Her-Next-Move.jfif`,
     title: "Anticipating Her Next Move",
   },
