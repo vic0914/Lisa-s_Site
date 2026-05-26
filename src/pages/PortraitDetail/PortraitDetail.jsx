@@ -1,13 +1,13 @@
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import HoverZoom from "../../components/HoverZoom/HoverZoom";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./PortraitDetail.css";
 
 const PortraitDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   // Same paintings data as Work page
   const paintings = [
@@ -422,7 +422,7 @@ const PortraitDetail = () => {
       </button>
       <div className="portrait-detail-container">
         <div className="portrait-image-section">
-          <div className="main-display">
+          <div className="main-display" onClick={() => setLightboxOpen(true)} style={{ cursor: "pointer" }}>
             {portrait.thumbnails && portrait.thumbnails[selectedMediaIndex] ? (
               portrait.thumbnails[selectedMediaIndex].type === "video" ? (
                 <video
@@ -434,10 +434,10 @@ const PortraitDetail = () => {
                   muted
                 />
               ) : (
-                <HoverZoom src={portrait.thumbnails[selectedMediaIndex].src} alt={portrait.title} />
+                <img src={portrait.thumbnails[selectedMediaIndex].src} alt={portrait.title} />
               )
             ) : (
-              <HoverZoom src={portrait.src} alt={portrait.title} />
+              <img src={portrait.src} alt={portrait.title} />
             )}
           </div>
 
@@ -447,7 +447,7 @@ const PortraitDetail = () => {
                 <div
                   key={index}
                   className={`thumbnail ${media.type === "video" ? "video-thumbnail" : ""} ${selectedMediaIndex === index ? "active" : ""}`}
-                  onClick={() => setSelectedMediaIndex(index)}
+                  onClick={() => { setSelectedMediaIndex(index); setLightboxOpen(true); }}
                 >
                   {media.type === "video" ? (
                     <>
@@ -497,6 +497,38 @@ const PortraitDetail = () => {
           )}
         </div>
       </div>
+      {lightboxOpen && (
+        <div className="portrait-lightbox" onClick={() => setLightboxOpen(false)}>
+          <div className="portrait-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={() => setLightboxOpen(false)}>✕</button>
+            <button
+              className="lightbox-prev"
+              onClick={() => setSelectedMediaIndex((prev) => (prev - 1 + portrait.thumbnails.length) % portrait.thumbnails.length)}
+            >
+              <FaChevronLeft />
+            </button>
+            <div className="lightbox-media">
+              {portrait.thumbnails[selectedMediaIndex].type === "video" ? (
+                <video
+                  src={portrait.thumbnails[selectedMediaIndex].src}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                />
+              ) : (
+                <img src={portrait.thumbnails[selectedMediaIndex].src} alt={portrait.title} />
+              )}
+            </div>
+            <button
+              className="lightbox-next"
+              onClick={() => setSelectedMediaIndex((prev) => (prev + 1) % portrait.thumbnails.length)}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

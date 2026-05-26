@@ -84,7 +84,7 @@ public/
     aphrodite-series/    # TN-Golden-Reign, TN-Gilded-Gaze, TN-Ascendant, TN-Enthroned, TN-Eternal, TN-Aphrodite, TN-All-Triptych
     sentinel-series/     # TN-Young, TN-Emerging, TN-Seasoned, TN-Noble, TN-Eternal-Sentinel, TN-Empress
     additional-works/    # TN-Awakening, TN-Shield-Maiden, TN-Future, TN-Judith
-    silver-belle-series/ # TN-Anticipating-Her-Next-Move-Interior, TN-Modern-Belle-Interior, TN-Reflecting-in-Living-Marble-Interior
+    silver-belle-series/ # TN-Belle-of-the-Silver-Garden-Interior, TN-Silver-Spark-Interior, TN-Anticipating-Her-Next-Move-Interior, TN-Modern-Belle-Interior, TN-Reflecting-in-Living-Marble-Interior
   videos/                # AI-*.MOV (AI animations) + Hero, Process videos
   certificates/          # Award JPEG/PNG files for Awards modal
   .htaccess              # Apache SPA routing — do not remove
