@@ -210,7 +210,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
   max-width: 92vw;
   max-height: 90vh;
 }
@@ -251,15 +250,26 @@
 
 .lightbox-prev,
 .lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   color: white;
   font-size: 1.75rem;
   cursor: pointer;
-  padding: 0.5rem;
-  flex-shrink: 0;
+  padding: 0.75rem 1rem;
   opacity: 0.75;
   transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
 }
 
 .lightbox-prev:hover,
